@@ -1,0 +1,22 @@
+{
+  "name": "Pur shop",
+  "license": "Icoding",
+  "authors": [
+    "Louis Phan <icoding.active@gmail.com>"
+  ],
+  "description": "Pur Shop.",
+  "homepage": "purangelique.com",
+  "keywords": [
+    "purshop",
+    "navigation"
+  ],
+  "main": "Purshop angelique",
+  "dependencies": {
+    "jquery": "2.2.3"
+  },
+  "ignore": [
+    "npm-debug.log",
+    "bower_components",
+    "node_modules"
+  ]
+}

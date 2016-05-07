@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3866f327-da8d-4a20-9ce7-b28492bbf752" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GruntFile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Dashboard.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/HomeAbout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/HomeExam.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/HomeHistory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/HomeIndex.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/HomeNews.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/HomeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Level.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Notification.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Profile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Question.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/Role.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Controllers/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Answers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Exams.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Generics.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Levels.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/News.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Questions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Roles.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Users.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/css/materialize.min.css" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/css/materialize.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/css/style.css" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/css/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/material-design-icons/LICENSE.txt" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/material-design-icons/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/material-design-icons/Material-Design-Icons.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/material-design-icons/Material-Design-Icons.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/material-design-icons/Material-Design-Icons.svg" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/material-design-icons/Material-Design-Icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/material-design-icons/Material-Design-Icons.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/material-design-icons/Material-Design-Icons.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/material-design-icons/Material-Design-Icons.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/material-design-icons/Material-Design-Icons.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/material-design-icons/Material-Design-Icons.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/material-design-icons/Material-Design-Icons.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Bold.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Light.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Light.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Light.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Light.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Medium.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Medium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Medium.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Medium.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Thin.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Thin.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Thin.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/font/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/fonts/roboto/Roboto-Thin.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Bold.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Light.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Light.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Light.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Light.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Medium.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Medium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Medium.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Medium.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Thin.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Thin.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Thin.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/fonts/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/font/roboto/Roboto-Thin.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/images/nova.png" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/images/nova.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/js/init.js" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/js/init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/js/materialize.min.js" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/js/materialize.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/js/page/about-us.js" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/js/page/about-us.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/js/page/home-action.js" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/js/page/home-action.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/js/page/review-home.js" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/js/page/review-home.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/Assets/js/page/test-home.js" afterPath="$PROJECT_DIR$/app/Templates/Admin/Assets/js/page/test-home.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/footer.php" afterPath="$PROJECT_DIR$/app/Templates/Admin/footer.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Templates/Home/header.php" afterPath="$PROJECT_DIR$/app/Templates/Admin/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Routes.php" afterPath="$PROJECT_DIR$/app/Routes.php" />
+    </list>
+    <ignored path="pur.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="pur" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GruntFile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GruntFile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="81" column="14" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/Routes.php" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/.bowerrc" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/GruntFile.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="1176" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3866f327-da8d-4a20-9ce7-b28492bbf752" name="Default" comment="" />
+      <created>1462445277775</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1462445277775</updated>
+      <workItem from="1462445280731" duration="888000" />
+      <workItem from="1462451744761" duration="624000" />
+      <workItem from="1462463953458" duration="609000" />
+      <workItem from="1462549321180" duration="603000" />
+      <workItem from="1462580078212" duration="896000" />
+      <workItem from="1462591319687" duration="7199000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10819000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1932" height="1176" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18006264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/Routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Templates/Default/Assets/js/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="1291" column="55" selection-start-line="1291" selection-start-column="55" selection-end-line="1291" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nova">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Logs/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Language/En/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GruntFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="81" column="14" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

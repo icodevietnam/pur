@@ -1,0 +1,55 @@
+{
+  "name": "Pur Shop",
+  "version": "4.1.0",
+  "description": "A shop sell clothers.",
+  "keywords": [
+    "clother",
+    "bra",
+    "vintage",
+    "new framework"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icodevietnam/validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/icodevietnam/validator/issues"
+  },
+  "author": {
+    "name": "Tuan Tu Phan",
+    "email": "icoding.active@gmail.com",
+    "url": "https://github.com/icodevietnam"
+  },
+  "homepage": "icodevietnam.com",
+  "contributors": [
+    {
+      "name": "Tuan Tu Phan",
+      "email": "icoding.active@gmail.com",
+      "url": "https://github.com/icodevietnam"
+    }
+  ],
+  "license": "icoding.active",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jscs": "^2.8.0",
+    "grunt-karma": "^0.12.2",
+    "jscs": "^2.10.1",
+    "karma": "^0.13.22",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-qunit": "^0.1.5",
+    "phantomjs": "^1.9.18",
+    "qunitjs": "^1.19.0"
+  },
+  "scripts": {
+    "jscs": "jscs src",
+    "test": "npm run jscs && grunt travis --verbose"
+  }
+}
