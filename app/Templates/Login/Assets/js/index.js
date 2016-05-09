@@ -1,12 +1,3 @@
-// Login/Register form
-// Author: Ian Pirro 
-//------------------------------------
-// Form will change from login to register and visa-versa based
-// on if the user is already "registered"
-// "Usernames" min-len is 5 chars
-//
-// Could be annoying... but fun anyways
-
 
 // These users "already exist"
 var users = [

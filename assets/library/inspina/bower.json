@@ -1,0 +1,11 @@
+{
+  "name": "inspinia-asset",
+  "description": "Assets for inspinia admin panel.",
+  "version": "4.0",
+  "main": "",
+  "dependencies": {
+    "font-awesome": "~4.0"
+  },
+  "license": "MIT",
+  "ignore": []
+}

@@ -12,7 +12,44 @@
   ],
   "main": "Purshop angelique",
   "dependencies": {
-    "jquery": "2.2.3"
+    "jquery": "2.2.3",
+    "bootstrap": "https://github.com/twbs/bootstrap.git",
+    "fontawesome":"https://github.com/tdg5/font-awesome-bower.git",
+    "animatecss":"https://github.com/daneden/animate.css.git",
+    "bootstrapswitch":"https://github.com/nostalgiaz/bootstrap-switch.git",
+    "datatablesbootstrap":"https://github.com/Jowin/Datatables-Bootstrap3.git",
+    "bootstrapselect":"https://github.com/silviomoreto/bootstrap-select.git",
+    "datepicker":"https://github.com/eternicode/bootstrap-datepicker.git",
+    "tinymce" : "https://github.com/tinymce/tinymce.git",
+    "momentjs":"https://github.com/moment/moment.git",
+    "jqueryvalidation":"https://github.com/jzaefferer/jquery-validation.git",
+    "metisMenu":"https://github.com/onokumus/metisMenu.git",
+    "slimscroll":"https://github.com/rochal/jQuery-slimScroll.git",
+    "inspina":"https://github.com/ImAnilChaudhari/inspinia-asset.git",
+    "pace":"https://github.com/HubSpot/pace.git"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   },
   "ignore": [
     "npm-debug.log",

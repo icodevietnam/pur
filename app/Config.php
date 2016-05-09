@@ -22,12 +22,12 @@ class Config
         /**
          * Define the complete site URL.
          */
-        define('SITEURL', 'http://localhost/cat-prj/');
+        define('SITEURL', 'http://localhost/pur/');
 
         /**
          * Define relative base path.
          */
-        define('DIR', '/cat-prj/');
+        define('DIR', '/pur/');
 
         /**
          * Set the Application Router.
@@ -49,11 +49,6 @@ class Config
         define('TEMPLATE', 'Default');
 
         /**
-         * Set the default number of question.
-         */
-        define('QUESTION', 7);
-
-        /**
          * Set the default template.
          */
         define('LOGIN', 'Login');
@@ -61,7 +56,7 @@ class Config
         /**
          * Set the default template.
          */
-        define('HOME', 'HOME');
+        define('ADMIN', 'ADMIN');
 
 
         /**
@@ -109,7 +104,7 @@ class Config
         /**
          * Optional create a constant for the name of the site.
          */
-        define('SITETITLE', 'Icode Based On Nova FW');
+        define('SITETITLE', "Women's Clothing Store");
 
 
         /**
