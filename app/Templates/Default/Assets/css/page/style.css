@@ -1,0 +1,22 @@
+.page-footer p.copyright{
+	color: #5c615d;
+	font-size: 19px;
+	border-top: 1px solid #5c615d;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.page-footer .front{
+	border-top: 1px solid #5c615d;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.page-footer .about-us{
+	width: 1048px;
+	margin: auto;
+}
+
+p.title{
+	
+}

@@ -1,13 +1,9 @@
 <?php
-/**
- * English language
- */
+
 return [
 	// Index method
 	'welcomeText' => 'Welcome',
-	'welcomeMessage' => '
-		Hello, welcome from the welcome controller! <br/>
-		This content can be changed in <code>/app/Views/Welcome/Welcome.php</code>
+	'purshop' => 'Pur shop
 	',
 
 	// Subpage method

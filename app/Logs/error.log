@@ -1,0 +1,4 @@
+2016-05-10 16:37PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
+
+2016-05-10 20:10PM - Missing argument 1 for App\Controllers\Language::change() in C:\xampp\htdocs\pur\app\Controllers\Language.php on line 17
+

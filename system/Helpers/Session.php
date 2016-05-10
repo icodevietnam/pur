@@ -1,7 +1,7 @@
 <?php
 
-namespace Helpers;
 
+namespace Helpers;
 /**
  * Prefix sessions with useful methods.
  */
@@ -13,7 +13,6 @@ class Session
      * @var boolean
      */
     private static $sessionStarted = false;
-
     /**
      * if session has not started, start sessions
      */
@@ -24,7 +23,13 @@ class Session
             self::$sessionStarted = true;
         }
     }
-
+    /**
+     * Determine if a key exists into session.
+     */
+    public static function exists($key)
+    {
+        return isset($_SESSION[SESSION_PREFIX .$key]);
+    }
     /**
      * Add value to a session.
      *
@@ -45,7 +50,6 @@ class Session
             $_SESSION[SESSION_PREFIX.$key] = $value;
         }
     }
-
     /**
      * Extract item from session then delete from the session, finally return the item.
      *
@@ -62,7 +66,6 @@ class Session
         }
         return null;
     }
-
     /**
      * Get item from session.
      *
@@ -84,7 +87,6 @@ class Session
         }
         return null;
     }
-
     /**
      * id
      *
@@ -94,7 +96,6 @@ class Session
     {
         return session_id();
     }
-
     /**
      * Regenerate session_id.
      *
@@ -105,7 +106,6 @@ class Session
         session_regenerate_id(true);
         return session_id();
     }
-
     /**
      * Return the session array.
      *
@@ -115,8 +115,6 @@ class Session
     {
         return $_SESSION;
     }
-
-
     /**
      * Empties and destroys the session.
      *
@@ -145,13 +143,11 @@ class Session
             }
         }
     }
-
     /**
      *
      *
       * @return string return the message inside div
      */
-
     /**
      * Display a one time message, then clear if from the session.
      *

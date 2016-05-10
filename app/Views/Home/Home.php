@@ -1,4 +1,4 @@
-<div id="index-banner" class="parallax-container">
+<!-- <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
@@ -20,7 +20,6 @@
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
@@ -64,3 +63,4 @@
     </div>
     <div class="parallax"><img src="<?=Url::imagePath();?>background2.jpg" alt="Ads 2" /></div>
   </div>
+ -->

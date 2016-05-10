@@ -29,15 +29,12 @@ module.exports = function (grunt) {
                 // Admin Path Assets
                 adminCss   : '<%= paths.assets.adminPath %>/css',
                 adminJs    : '<%= paths.assets.adminPath %>/js',
-                adminLess  : '<%= paths.assets.adminPath %>/less',
                 // Login Path Assets
                 loginCss   : '<%= paths.assets.loginPath %>/css',
                 loginJs   : '<%= paths.assets.loginPath %>/js',
-                loginLess  : '<%= paths.assets.loginPath %>/less',
                 //defaultPath Assets
                 defaultCss   : '<%= paths.assets.defaultPath %>/css',
                 defaultJs    : '<%= paths.assets.defaultPath %>/js',
-                defaultLess  : '<%= paths.assets.defaultPath %>/less',
                 //Library Vendor
                 vendor: 'assets/library',
                 build : 'assets/build',
@@ -58,9 +55,9 @@ module.exports = function (grunt) {
                 adminCss		  :'<%= paths.assets.adminCss %>/main',
                 loginCss		  :'<%= paths.assets.loginCss %>/main',
                 defaultCss		  :'<%= paths.assets.defaultCss %>/main',
-                adminJs		  :'<%= paths.assets.adminJs %>/js',
+                adminJs		  :'<%= paths.assets.adminJs %>/main',
                 loginJs		  :'<%= paths.assets.loginJs %>/main',
-                defaultJs		  :'<%= paths.assets.defaultJs %>/js',
+                defaultJs		  :'<%= paths.assets.defaultJs %>/main',
             }
         },
 
@@ -108,9 +105,9 @@ module.exports = function (grunt) {
                     compres     : true
                 },
                 src: [
-                    '<%= paths.assets.build %>/*/js/*.js'
+                    '<%= paths.assets.build %>/default/js/home.js'
                 ],
-                dest: '<%= paths.assets.main %>/js'
+                dest: '<%= paths.main.defaultJs %>/home.min.js'
             }
         },
 
@@ -169,7 +166,7 @@ module.exports = function (grunt) {
                     '<%= paths.assets.vendor %>/datatablesbootstrap/BS3/assets/css/datatables.css',
                     '<%= paths.assets.vendor %>/bootstrapselect/dist/css/bootstrap-select.css',
                     '<%= paths.assets.vendor %>/datepicker/dist/css/bootstrap-datepicker.css',
-                    '<%= paths.assets.adminCss %>/style.css'
+                    '<%= paths.assets.adminCss %>/page/*.css'
                 ],
                 dest: '<%= paths.build.adminCss %>/admin.css'
             },
@@ -179,8 +176,8 @@ module.exports = function (grunt) {
                     banner: "/!* purshop Software 2015 *!/\n"
                 },
                 src  : [
-                    '<%= paths.assets.vendor %>/jquery/dist/bootstrap.js',
-                    '<%= paths.assets.vendor %>/bootstrap/dist/js/jquery.js',
+                    '<%= paths.assets.vendor %>/jquery/dist/jquery.js',
+                    '<%= paths.assets.vendor %>/bootstrap/dist/js/bootstrap.js',
                     '<%= paths.assets.vendor %>/bootstrapselect/dist/js/bootstrap-select.js',
                     '<%= paths.assets.vendor %>/datepicker/dist/js/bootstrap-datepicker.js',
                     '<%= paths.assets.vendor %>/bootstrapswitch/dist/js/bootstrap-switch.js',
@@ -189,18 +186,31 @@ module.exports = function (grunt) {
                     '<%= paths.assets.vendor %>/tinymce/js/tinymce/jquery.tinymce.min.js',
                     '<%= paths.assets.vendor %>/datatablesbootstrap/BS3/assets/js/datatables.js',
                     '<%= paths.assets.vendor %>/datatables/media/js/jquery.dataTables.js',
+                    '<%= paths.assets.vendor %>/jqueryvalidation/dist/jquery.validate.js',
                     '<%= paths.assets.vendor %>/metisMenu/dist/metisMenu.js',
                     '<%= paths.assets.vendor %>/slimscroll/jquery.slimscroll.js',
                     '<%= paths.assets.vendor %>/inspina/js/inspina.js',
-                    '<%= paths.assets.vendor %>/pace/pace.js'
+                    '<%= paths.assets.vendor %>/pace/pace.js',
                 ],
                 dest : '<%= paths.build.adminJs %>/admin.js'
             },
             defaultCss:{
-
+                src: [
+                    '<%= paths.assets.vendor %>/materialize/dist/css/materialize.css',
+                    '<%= paths.assets.defaultCss %>/page/*.css'
+                ],
+                dest: '<%= paths.build.defaultCss %>/home.css'
             },
             defaultJs:{
-                
+                src: [
+                    '<%= paths.assets.vendor %>/jquery/dist/jquery.js',
+                    '<%= paths.assets.vendor %>/momentjs/moment.js',
+                    '<%= paths.assets.vendor %>/tinymce/js/tinymce/tinymce.min.js',
+                    '<%= paths.assets.vendor %>/tinymce/js/tinymce/jquery.tinymce.min.js',
+                    '<%= paths.assets.vendor %>/jqueryvalidation/dist/jquery.validate.js',
+                    '<%= paths.assets.vendor %>/materialize/dist/js/materialize.js'
+                ],
+                dest: '<%= paths.build.defaultJs %>/home.js'
             }
         },
 
@@ -225,9 +235,19 @@ module.exports = function (grunt) {
         },
 
         cssmin: {
-            target: {
+            adminCss: {
                 files: {
-                    '<%= paths.assets.main %>/*.min.css': ['<%= paths.assets.build %>/*/*/*.css']
+                    '<%= paths.main.adminCss %>/admin.min.css': ['<%= paths.assets.build %>/admin/css/admin.css']
+                }
+            },
+            defaultCss:{
+                files: {
+                    '<%= paths.main.defaultCss %>/home.min.css': ['<%= paths.assets.build %>/default/css/home.css']
+                }
+            },
+            loginCss:{
+                files: {
+                    '<%= paths.main.loginCss %>/login.min.css': ['<%= paths.assets.build %>/login/css/login.css']
                 }
             }
         }
@@ -243,7 +263,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('build',['clean:assets','concat','uglify'])/*, 'concat', 'uglify:prod', 'csscomb', 'cssmin']);*!/*/
+    grunt.registerTask('build',['clean:assets','concat','uglify','cssmin']);/*, 'concat', 'uglify:prod', 'csscomb', 'cssmin']);*!/*/
+    grunt.registerTask('tuantu',['clean:assets','concat','cssmin']);
+    grunt.registerTask('admin',['clean:assets','concat:adminJs','concat:adminCss','uglify:adminJs']);
+    grunt.registerTask('home',['clean:assets','concat:defaultJs','concat:defaultCss','cssmin:defaultCss']);
+    grunt.registerTask('login',['clean:assets','concat:loginJs','concat:loginCss','uglify:loginJs']);
     grunt.registerTask('default',['clean:assets']);
     /*grunt.registerTask('prod', ['jshint', 'clean:assets', 'less', 'concat', 'uglify:prod', 'csscomb', 'cssmin', 'clean:build']);*/
 }

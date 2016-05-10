@@ -9,7 +9,11 @@ $router = Router::getInstance();
 
 /** Define static routes. */
 
-Router::get('/news','App\Controllers\HomeNews@news');
+Router::get('/','App\Controllers\Home@index');
+Router::get('/home','App\Controllers\Home@index');
+
+/* Language */
+Router::any('lang/(:any)', 'App\Controllers\Language@change');
 
 /** End default routes */
 

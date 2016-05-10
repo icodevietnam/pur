@@ -40,7 +40,7 @@ class Config
         /**
          * Set default controller and method for legacy calls.
          */
-        define('DEFAULT_CONTROLLER', 'Welcome');
+        define('DEFAULT_CONTROLLER', 'Home');
         define('DEFAULT_METHOD', 'index');
 
         /**
@@ -56,7 +56,7 @@ class Config
         /**
          * Set the default template.
          */
-        define('ADMIN', 'ADMIN');
+        define('ADMIN', 'Admin');
 
 
         /**
@@ -79,7 +79,7 @@ class Config
         /**
          * Database name.
          */
-        define('DB_NAME', 'catprj');
+        define('DB_NAME', 'pur');
 
         /**
          * Database username.
@@ -94,12 +94,12 @@ class Config
         /**
          * PREFER to be used in database calls default is smvc_
          */
-        define('PREFIX', 'prj_');
+        define('PREFIX', '');
 
         /**
          * Set prefix for sessions.
          */
-        define('SESSION_PREFIX', 'prj_');
+        define('SESSION_PREFIX', '');
 
         /**
          * Optional create a constant for the name of the site.

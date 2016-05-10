@@ -1,4 +1,23 @@
-	<footer class="page-footer black">
+<footer class="page-footer white">
+	<div class="front container">
+		<div class="about-us">
+			<div class='row'>
+				<div id='aboutUs' class='col s12 m6 l6'>
+					
+				</div>
+				<div id='shopLocation' class='col s12 m6 l6'>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<p class="copyright center-align">
+		© <?php echo Language::show('copyright', 'Home'); ?> <?php echo date("Y"); ?>, <?php echo Language::show('purshop', 'Home'); ?> . <?php echo Language::show('allright', 'Home'); ?>.
+		</p>
+	</div>
+</footer>
+<!-- 	<footer class="page-footer black">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col l6 s12">
@@ -91,29 +110,9 @@
 	    </div>
   </div>
 	</div>
-<script>
-	$(document).ready(function() {
-	  	$('.modal-trigger').leanModal();
-	  	$('.datepicker').pickadate({
-    		selectMonths: true, // Creates a dropdown to control month
-    		selectYears: 15, // Creates a dropdown of 15 years to control year
-  			format : 'mm/dd/yyyy'
-  		});
-	  	$('#dropdown2').hide();
-  		$('.dropdown-button').on('click',function(){
-  			$('#dropdown2').toggle();
-  		});
-
-  		$('.collapsible').collapsible({
-      		accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-   		});
-	});
-</script>
 <?php
     Assets::js([
-        Url::templateHomePath().'js/materialize.min.js',
-        Url::templateHomePath().'js/page/home-action.js',
-        Url::templateHomePath().'js/init.js'
+        Url::templatePath().'js/main/home.min.js'
     ]);
 
     echo $js; //place to pass data / plugable hook zone
@@ -121,3 +120,4 @@
 ?> 
 </body>
 </html>
+ -->
