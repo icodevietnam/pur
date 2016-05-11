@@ -1,13 +1,12 @@
 .page-footer p.copyright{
 	color: #5c615d;
 	font-size: 19px;
-	border-top: 1px solid #5c615d;
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
 
 .page-footer .front{
-	border-top: 1px solid #5c615d;
+	background: #EDF8E8;
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -18,5 +17,15 @@
 }
 
 p.title{
-	
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+#aboutUs i{
+	margin-right: 10px;
+}
+
+#aboutUs span{
+	margin-top: -5px;
 }

@@ -197,6 +197,7 @@ module.exports = function (grunt) {
             defaultCss:{
                 src: [
                     '<%= paths.assets.vendor %>/materialize/dist/css/materialize.css',
+                    '<%= paths.assets.vendor %>/fontawesome/css/font-awesome.css',
                     '<%= paths.assets.defaultCss %>/page/*.css'
                 ],
                 dest: '<%= paths.build.defaultCss %>/home.css'

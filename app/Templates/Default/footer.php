@@ -3,7 +3,12 @@
 		<div class="about-us">
 			<div class='row'>
 				<div id='aboutUs' class='col s12 m6 l6'>
-					
+					<p class="title"><?php echo Language::show('contactus', 'Home'); ?></p>
+					<ul>
+						<li><i class="small material-icons">location_on</i><span><?php echo Language::show('address', 'Home'); ?> : 443 Lê Văn Sỹ, Tân Bình, Hồ Chí Minh</span></li>
+						<li><i class="small material-icons">phonelink_ring</i><?php echo Language::show('phone', 'Home'); ?> : 0909 076 619</li>
+						<li><i class="small material-icons">email</i><?php echo Language::show('email', 'Home'); ?> : purshop@gmail.com</li>
+					</ul>
 				</div>
 				<div id='shopLocation' class='col s12 m6 l6'>
 					
