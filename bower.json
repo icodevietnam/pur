@@ -27,7 +27,8 @@
     "slimscroll":"https://github.com/rochal/jQuery-slimScroll.git",
     "inspina":"https://github.com/ImAnilChaudhari/inspinia-asset.git",
     "materialize":"https://github.com/Dogfalo/materialize.git",
-    "pace":"https://github.com/HubSpot/pace.git"
+    "pace":"https://github.com/HubSpot/pace.git",
+    "flagicon" : "https://github.com/lipis/flag-icon-css.git"
 
 
 

@@ -210,6 +210,7 @@ module.exports = function (grunt) {
                     '<%= paths.assets.vendor %>/tinymce/js/tinymce/jquery.tinymce.min.js',
                     '<%= paths.assets.vendor %>/jqueryvalidation/dist/jquery.validate.js',
                     '<%= paths.assets.vendor %>/materialize/dist/js/materialize.js'
+                    /*'<%= paths.assets.defaultJs %>/page/*.js'*/
                 ],
                 dest: '<%= paths.build.defaultJs %>/home.js'
             }
@@ -267,6 +268,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build',['clean:assets','concat','uglify','cssmin']);/*, 'concat', 'uglify:prod', 'csscomb', 'cssmin']);*!/*/
     grunt.registerTask('tuantu',['clean:assets','concat','cssmin']);
     grunt.registerTask('admin',['clean:assets','concat:adminJs','concat:adminCss','uglify:adminJs']);
+    grunt.registerTask('hojs',['clean:assets','concat:defaultJs','uglify:defaultJs']);
     grunt.registerTask('home',['clean:assets','concat:defaultJs','concat:defaultCss','cssmin:defaultCss']);
     grunt.registerTask('login',['clean:assets','concat:loginJs','concat:loginCss','uglify:loginJs']);
     grunt.registerTask('default',['clean:assets']);

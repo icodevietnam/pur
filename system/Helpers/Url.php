@@ -86,7 +86,7 @@ class Url
         return SITEURL .'templates/' .$template .$folder;
     }
 
-    public static function templateHomePath($custom = HOME, $folder = '/assets/')
+    public static function templateAdminPath($custom = ADMIN, $folder = '/assets/')
     {
         $template = Inflector::tableize($custom);
 

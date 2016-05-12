@@ -12,6 +12,70 @@
     ]);
     echo $css; //place to pass data / plugable hook zone
     ?>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDNhQodvMWGRaXcSs5blVgRyoJCsvV_W74&callback=ShopMap.addDom" async defer></script>
 
 </head>
 <body>
+<div class="header container">
+    <div class="header-language right">
+      <p class="center">
+        <?php if(Session::get('language')==='En') {?>
+          <?= Language::show('en', 'General'); ?>
+        <?php } 
+          else { ?>
+            <?= Language::show('vi', 'General'); ?>
+        <?php }?>
+      </p>
+    </div>
+    <a href="<?= SITEURL ?>">
+        <img src="<?= Url::imagePath() ?>/logo.png" />
+    </a>
+</div>
+<div class="container">
+    <nav class="pur">
+  <ul class="primary">
+    <li>
+      <a href="#"><?= Language::show('home', 'General'); ?></a>
+    </li>
+    <li>
+      <a href=""><?= Language::show('product', 'General'); ?></a>
+      <ul class="sub">
+        <li><a href="">Tabby</a></li>
+        <li><a href="">Black Cat</a></li>
+        <li><a href="">Wrinkly Cat</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href=""><?= Language::show('galery', 'General'); ?></a>
+      <ul class="sub">
+        <li><a href="">Humming Bird</a></li>
+        <li><a href="">Hawk</a></li>
+        <li><a href="">Crow</a></li>
+      </ul>  
+    </li>
+    <li>
+      <a href=""><?= Language::show('news', 'General'); ?></a>
+      <ul class="sub">
+        <li><a href="">Brown Horse</a></li>
+        <li><a href="">Race Horse</a></li>
+        <li><a href="">Tall Horse</a></li>
+      </ul>  
+    </li>
+    <li>
+      <a href=""><?= Language::show('contact-us', 'General'); ?></a>
+      <ul class="sub">
+        <li><a href="">Cheesy</a></li>
+        <li><a href="">More Ketchup</a></li>
+        <li><a href="">Some Mustard</a></li>
+        <li><a href="">Extra Butter</a></li>
+      </ul>  
+    </li>
+    <li>
+      <div class='search-input'>
+        <span class="icon"><i class="fa fa-2x fa-search"></i></span>
+        <input type="search" id="search" placeholder="<?= Language::show('search', 'General'); ?>..." />
+      </div>
+    </li>
+  </ul>
+</nav>
+</div>

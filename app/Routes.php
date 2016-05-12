@@ -9,8 +9,16 @@ $router = Router::getInstance();
 
 /** Define static routes. */
 
-Router::get('/','App\Controllers\Home@index');
-Router::get('/home','App\Controllers\Home@index');
+/* Home Page */
+Router::get('/','App\Controllers\PageHome@index');
+Router::get('/home','App\Controllers\PageHome@index');
+Router::get('/index','App\Controllers\PageHome@index');
+Router::get('/home.html','App\Controllers\PageHome@index');
+Router::get('/index.html','App\Controllers\PageHome@index');
+
+/* Admin Page */
+Router::get('/admin/~dashboard','App\Controllers\PageAdmin@dashboard');
+
 
 /* Language */
 Router::any('lang/(:any)', 'App\Controllers\Language@change');
