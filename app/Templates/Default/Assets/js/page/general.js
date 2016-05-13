@@ -1,7 +1,11 @@
 $(function() {
+    $('.list-language').hide();
+    $('.header-language').click(function(){
+        General.showLanguage();
+    });
 });
 
-var ShopMap = {
+var General = {
     init: function() {
         var geocoder;
         var map;
@@ -52,5 +56,8 @@ var ShopMap = {
     },
     addDom : function(){
     	google.maps.event.addDomListener(window, 'load', this.init());
+    },
+    showLanguage:function(){
+        $('.list-language').toggle();
     }
 }

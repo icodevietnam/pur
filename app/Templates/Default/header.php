@@ -12,7 +12,7 @@
     ]);
     echo $css; //place to pass data / plugable hook zone
     ?>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDNhQodvMWGRaXcSs5blVgRyoJCsvV_W74&callback=ShopMap.addDom" async defer></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDNhQodvMWGRaXcSs5blVgRyoJCsvV_W74&callback=General.addDom" async defer></script>
 
 </head>
 <body>
@@ -25,11 +25,16 @@
           else { ?>
             <?= Language::show('vi', 'General'); ?>
         <?php }?>
+        <i class="fa fa-sort-desc" aria-hidden="true"></i>
       </p>
     </div>
     <a href="<?= SITEURL ?>">
         <img src="<?= Url::imagePath() ?>/logo.png" />
     </a>
+    <ul class="list-language right">
+      <li><a href="<?= DIR ?>lang/en"><?= Language::show('en', 'General'); ?></a></li>
+      <li><a href="<?= DIR ?>lang/vi"><?= Language::show('vi', 'General'); ?></a></li>
+    </ul>
 </div>
 <div class="container">
     <nav class="pur">

@@ -7,45 +7,10 @@
     <?php
     echo $meta;//place to pass data / plugable hook zone
     Assets::css([
-        Url::templatePath().'css/bootstrap.min.css',
-        Url::templatePath().'css/bootstrap-theme.min.css',
-        Url::templatePath().'font-awesome/css/font-awesome.css',
-        Url::templatePath().'css/animate.css',
-        Url::templatePath().'css/bootstrap-switch.min.css',
-        Url::templatePath().'css/dataTables.bootstrap.css',
-        Url::templatePath().'css/bootstrap-select.css',
-        Url::templatePath().'css/datepicker.css',
-        Url::templatePath().'css/style.css',
+        Url::templateAdminPath().'css/main/admin.min.css'
     ]);
     echo $css; //place to pass data / plugable hook zone
     ?>
-
-    <?php
-    Assets::js([
-        Url::templatePath().'js/jquery-2.1.1.js',
-        Url::templatePath().'js/bootstrap-select.js',
-        Url::templatePath().'js/bootstrap-datepicker.js',
-        Url::templatePath().'js/bootstrap-switch.min.js',
-        Url::templatePath().'js/moment.js',
-        Url::templatePath().'js/tinymce/tinymce.min.js',
-        Url::templatePath().'js/tinymce/jquery.tinymce.min.js',
-        Url::templatePath().'js/jquery.dataTables.js',
-        Url::templatePath().'js/dataTables.bootstrap.js',
-        Url::templatePath().'js/jquery.validate.js',
-        Url::templatePath().'js/bootstrap.min.js',
-    ]);
-    ?>
-    <script>
-        tinymce.init({
-            selector: "textarea",
-            statusbar: false,
-            setup: function (editor) {
-                editor.on('change', function () {
-                    tinymce.triggerSave();
-                });
-            }
-        });
-    </script>
 </head>
 <body>
 <?php echo $afterBody; //place to pass data / plugable hook zone?>
