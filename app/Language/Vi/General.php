@@ -16,5 +16,6 @@ return [
 	'email' => 'Thư điện tử',
 	'search' => 'Tìm kiếm',
 	'en' => 'Tiếng Anh',
-	'vi' => 'Tiếng Việt'
+	'vi' => 'Tiếng Việt',
+	'login' => 'Đăng nhập'
 ];

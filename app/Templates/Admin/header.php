@@ -33,40 +33,60 @@
                         </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="<?=DIR;?>admin/profile">Profile</a></li>
-                            <li><a href="<?=DIR;?>admin/change-password">Change Password</a></li>
+                            <li><a href="<?=DIR;?>admin/profile">Tài khoản</a></li>
+                            <li><a href="<?=DIR;?>admin/change-password">Đổi mật mã</a></li>
                             <li class="divider"></li>
-                            <li><a href="<?=DIR;?>admin/logout">Exit</a></li>
+                            <li><a href="<?=DIR;?>admin/logout">Thoát</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">IN+</div>
                 </li>
-                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">General</span> <span class="fa arrow"></span></a>
+                    <li class="user <?php if($key === 'general') echo 'active'; ?> "><a href="#"><i class="fa fa-tachometer"></i> <span
+                                class="nav-label">Tổng hợp</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="<?=DIR;?>admin/dashboard">Dashboard</a></li>
+                            <li><a href="<?=DIR;?>admin/~dashboard">Bảng điều khiển</a></li>
+                            <li><a href="<?=DIR;?>admin/~preference">Thông tin chung</a></li>
+                            <li><a href="<?=DIR;?>admin/~about-us">Về chúng tôi</a></li>
                         </ul>
                     </li>
-                    <li class="user <?php if($menu == 'user') echo 'active'; ?> "><a href="#"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">Manage User</span> <span class="fa arrow"></span></a>
+                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-users"></i> <span
+                                class="nav-label">Người dùng</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="<?=DIR;?>admin/user">Manage Users</a></li>
-                            <li><a href="<?=DIR;?>admin/role">Manage Roles</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý người dùng</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý vai trò</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý quyền hạn</a></li>
                         </ul>
                     </li>
-                    <li class="exam <?php if($menu == 'exam') echo 'active'; ?> "><a href="#"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">Manage Examination</span> <span class="fa arrow"></span></a>
+                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-sellsy"></i> <span
+                                class="nav-label">Sản phẩm</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="<?=DIR;?>admin/level">Manage Levels</a></li>
-                            <li><a href="<?=DIR;?>admin/question-answer">Question & Answer</a></li>
-                            <!-- <li><a href="<?=DIR;?>admin/check-exams">Check Exams</a></li> -->
+                            <li><a href="<?=DIR;?>admin/dashboard">Chuyên mục sản phẩm</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý sản phẩm</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Bộ sưu tập</a></li>
                         </ul>
                     </li>
-                    <li class="news <?php if($menu == 'news') echo 'active'; ?> "><a href="#"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">News</span> <span class="fa arrow"></span></a>
+                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-cc-mastercard"></i> <span
+                                class="nav-label">Thương mại điện tử</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="<?=DIR;?>admin/notification">Manage Notification</a></li>
-                            <li><a href="<?=DIR;?>admin/news">Manage News</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý khách hàng</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Theo dõi đơn hàng</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Đơn hàng thành công</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Đơn hàng còn treo</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Khuyến mãi</a></li>
+                        </ul>
+                    </li>
+                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-newspaper-o"></i> <span
+                                class="nav-label">Tin tức</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="<?=DIR;?>admin/dashboard">Chuyên mục tin tức</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Tin tức</a></li>
+                        </ul>
+                    </li>
+                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-newspaper-o"></i> <span
+                                class="nav-label">Thư viện</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý thư viện</a></li>
+                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý hình ảnh</a></li>
                         </ul>
                     </li>
             </ul>
@@ -98,7 +118,7 @@
 
 
                     <li><a href="<?=DIR;?>admin/logout"> <i
-                                class="fa fa-sign-out"></i> Log out
+                                class="fa fa-sign-out"></i> Thoát
                         </a></li>
                 </ul>
 
@@ -108,7 +128,7 @@
             <div class="col-lg-10">
                 <h2><?= $title ?></h2>
                 <ol class="breadcrumb">
-                    <li><a href="<?=DIR;?>">Home</a></li>
+                    <li><a href="<?=DIR;?>admin">Home</a></li>
                     <li class="active"><strong><?= $title ?></strong></li>
                 </ol>
             </div>

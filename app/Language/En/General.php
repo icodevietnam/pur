@@ -16,5 +16,6 @@ return [
 	'email' => 'Email',
 	'search' => 'Search',
 	'en' => 'English',
-	'vi' => 'Vietnamese'
+	'vi' => 'Vietnamese',
+	'login' => 'Login'
 ];

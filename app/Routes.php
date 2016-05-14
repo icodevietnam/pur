@@ -17,7 +17,11 @@ Router::get('/home.html','App\Controllers\PageHome@index');
 Router::get('/index.html','App\Controllers\PageHome@index');
 
 /* Admin Page */
+Router::get('/admin','App\Controllers\PageAdmin@dashboard');
 Router::get('/admin/~dashboard','App\Controllers\PageAdmin@dashboard');
+Router::get('/admin/~preference','App\Controllers\PageAdmin@preference');
+Router::get('/admin/~about-us','App\Controllers\PageAdmin@aboutUs');
+
 
 
 /* Language */

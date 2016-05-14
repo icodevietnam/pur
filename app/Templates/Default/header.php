@@ -28,6 +28,11 @@
         <i class="fa fa-sort-desc" aria-hidden="true"></i>
       </p>
     </div>
+    <div class="login right">
+      <p class="center">
+        <i class="fa fa-user" aria-hidden="true"></i> <?= Language::show('login', 'General'); ?>
+      </p>
+    </div>
     <a href="<?= SITEURL ?>">
         <img src="<?= Url::imagePath() ?>/logo.png" />
     </a>

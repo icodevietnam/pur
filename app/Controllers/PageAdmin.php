@@ -10,11 +10,31 @@ class PageAdmin extends Controller {
     {
         parent::__construct();
     }
-    //Home index
+    //Dashboard index
     public function dashboard(){
-    	$data['title'] = 'Home';
+    	$data['title'] = 'Bảng điều khiển';
+        $data['key'] = 'general';
     	View::renderTemplate('header', $data,'admin');
-        View::render('Home/Home', $data);
+        View::render('Admin/Dashboard', $data);
         View::renderTemplate('footer', $data,'admin');
     }
+
+    //Preference index
+    public function preference(){
+        $data['title'] = 'Thông tin chung';
+        $data['key'] = 'general';
+        View::renderTemplate('header', $data,'admin');
+        View::render('Admin/Preference', $data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+    
+    //About us
+    public function aboutUs(){
+        $data['title'] = 'Về chúng tôi';
+        $data['key'] = 'general';
+        View::renderTemplate('header', $data,'admin');
+        View::render('Admin/Preference', $data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+
 }
