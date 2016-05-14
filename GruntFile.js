@@ -166,15 +166,12 @@ module.exports = function (grunt) {
                     '<%= paths.assets.vendor %>/datatablesbootstrap/BS3/assets/css/datatables.css',
                     '<%= paths.assets.vendor %>/bootstrapselect/dist/css/bootstrap-select.css',
                     '<%= paths.assets.vendor %>/datepicker/dist/css/bootstrap-datepicker.css',
+                    '<%= paths.assets.vendor %>/metisMenu/dist/metisMenu.css',
                     '<%= paths.assets.adminCss %>/page/*.css'
                 ],
                 dest: '<%= paths.build.adminCss %>/admin.css'
             },
             adminJs:{
-                options: {
-                    seperator: ';',
-                    banner: "/!* purshop Software 2015 *!/\n"
-                },
                 src  : [
                     '<%= paths.assets.vendor %>/jquery/dist/jquery.js',
                     '<%= paths.assets.vendor %>/bootstrap/dist/js/bootstrap.js',
@@ -184,7 +181,7 @@ module.exports = function (grunt) {
                     '<%= paths.assets.vendor %>/momentjs/moment.js',
                     '<%= paths.assets.vendor %>/tinymce/js/tinymce/tinymce.min.js',
                     '<%= paths.assets.vendor %>/tinymce/js/tinymce/jquery.tinymce.min.js',
-                    '<%= paths.assets.vendor %>/datatablesbootstrap/BS3/assets/js/datatables.js',
+                    /*'<%= paths.assets.vendor %>/datatablesbootstrap/BS3/assets/js/datatables.js',*/
                     '<%= paths.assets.vendor %>/datatables/media/js/jquery.dataTables.js',
                     '<%= paths.assets.vendor %>/jqueryvalidation/dist/jquery.validate.js',
                     '<%= paths.assets.vendor %>/metisMenu/dist/metisMenu.js',
