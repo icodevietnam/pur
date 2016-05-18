@@ -58,6 +58,11 @@ class Config
          */
         define('ADMIN', 'Admin');
 
+        /**
+         * Set salt
+         */
+        define('SALT', '1');
+
 
         /**
          * Set a default language.

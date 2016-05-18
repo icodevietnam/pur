@@ -16,11 +16,20 @@ Router::get('/index','App\Controllers\PageHome@index');
 Router::get('/home.html','App\Controllers\PageHome@index');
 Router::get('/index.html','App\Controllers\PageHome@index');
 
+/* User Login Page */
+Router::get('/admin/login','App\Controllers\PageLogin@login');
+Router::post('/admin/login','App\Controllers\User@login');
+Router::get('/admin/logout','App\Controllers\User@logout');
+
 /* Admin Page */
 Router::get('/admin','App\Controllers\PageAdmin@dashboard');
 Router::get('/admin/~dashboard','App\Controllers\PageAdmin@dashboard');
 Router::get('/admin/~preference','App\Controllers\PageAdmin@preference');
 Router::get('/admin/~about-us','App\Controllers\PageAdmin@aboutUs');
+Router::get('/admin/~language','App\Controllers\PageAdmin@language');
+
+/* User Admin Page */
+Router::get('/admin/~user','App\Controllers\PageAdmin@user');
 
 
 

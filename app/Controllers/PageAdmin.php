@@ -9,6 +9,9 @@ class PageAdmin extends Controller {
 	public function __construct()
     {
         parent::__construct();
+        if(Session::get('username') === null){
+            Url::redirect('admin/login');
+        }
     }
     //Dashboard index
     public function dashboard(){
@@ -34,6 +37,22 @@ class PageAdmin extends Controller {
         $data['key'] = 'general';
         View::renderTemplate('header', $data,'admin');
         View::render('Admin/Preference', $data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+
+    public function language(){
+        $data['title'] = 'Ngôn ngữ';
+        $data['key'] = 'general';
+        View::renderTemplate('header', $data,'admin');
+        View::render('Admin/Language', $data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+
+    public function user(){
+        $data['title'] = 'Người dùng';
+        $data['key'] = 'user';
+        View::renderTemplate('header', $data,'admin');
+        View::render('Admin/User', $data);
         View::renderTemplate('footer', $data,'admin');
     }
 

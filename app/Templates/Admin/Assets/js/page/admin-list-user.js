@@ -1,0 +1,7 @@
+$(function(){
+
+});
+
+var User = {
+	url : '',
+}

@@ -12,10 +12,6 @@
 </div>
 
 <?php
-Assets::js([
-	Url::templateAdminPath().'js/main/admin.min.js',
-	Url::templateAdminPath().'js/page/utils.js',
-]);
 echo $js; //place to pass data / plugable hook zone
 echo $footer; //place to pass data / plugable hook zone
 ?>

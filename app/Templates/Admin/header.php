@@ -9,6 +9,10 @@
     Assets::css([
         Url::templateAdminPath().'css/main/admin.min.css'
     ]);
+    Assets::js([
+    Url::templateAdminPath().'js/main/admin.min.js',
+    Url::templateAdminPath().'js/page/utils.js',
+    ]);
     echo $css; //place to pass data / plugable hook zone
     ?>
 </head>
@@ -27,7 +31,7 @@
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
                         <span class="clear">
                             <span class="block m-t-xs"> <strong
-                                    class="font-bold"></strong>
+                                    class="font-bold"><?= Session::get('fullname') ?></strong>
                             </span>
                             <!-- <span class="departmentCur text-muted text-xs block">Phòng: Art Director</span> -->
                         </span>
@@ -47,9 +51,10 @@
                             <li><a href="<?=DIR;?>admin/~dashboard">Bảng điều khiển</a></li>
                             <li><a href="<?=DIR;?>admin/~preference">Thông tin chung</a></li>
                             <li><a href="<?=DIR;?>admin/~about-us">Về chúng tôi</a></li>
+                            <li><a href="<?=DIR;?>admin/~language">Ngôn ngữ</a></li>
                         </ul>
                     </li>
-                    <li class="user <?php if($menu == 'preference') echo 'active'; ?> "><a href="#"><i class="fa fa-users"></i> <span
+                    <li class="user <?php if($key == 'user') echo 'active'; ?> "><a href="#"><i class="fa fa-users"></i> <span
                                 class="nav-label">Người dùng</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="<?=DIR;?>admin/dashboard">Quản lý người dùng</a></li>
@@ -109,7 +114,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li><span class="m-r-sm text-muted welcome-message">Hello,
-                    <strong><?php echo Session::get('admin')[0]->username ?></strong> ! </span></li>
+                    <strong><?php echo Session::get('username')?></strong> ! </span></li>
                     <!-- <li class="dropdown"><a class="count-info"
                         href="<c:url value='/admin/viewNoti'/>"> <i class="fa fa-bell"></i> <span
                             class="label label-primary">1</span>

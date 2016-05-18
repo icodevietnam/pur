@@ -23,4 +23,6 @@ class Language extends Controller {
         }
         Url::redirect();
     }
+
+    
 }
