@@ -2,11 +2,12 @@
 	<div class="col-lg-12">
 		<div class="ibox">
 			<div class="ibox-content">
+				<code class="crud-message"></code>
 				<a href="<?=DIR;?>admin/~language" class="btn-link">
 					<h2>Người dùng</h2>
 				</a>
 				<hr />
-				<button data-toggle="modal" data-target="#newItem"class="btn btn-sm btn-primary">Tạo mới người dùng</button>
+				<a href="<?=DIR?>user/~create?ikey=<?= Session::get('token') ?>" data-toggle="modal" class="btn btn-sm btn-primary">Tạo mới người dùng</a>
 				<div class="table-responsive">
 					<table id="tblItems"
 							class="table table-bordered table-hover table-striped">

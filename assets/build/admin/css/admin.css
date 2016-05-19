@@ -21572,3 +21572,10 @@ li.user,li.exam,li.news{
   -webkit-border-radius :0px;
 }
 
+.btn-crud {
+  margin-right: 5px !important;
+}
+
+p.crud-message {
+  border : 1px dotted red;
+}

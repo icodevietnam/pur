@@ -36,6 +36,10 @@ Router::get('/admin/~user','App\Controllers\PageAdmin@user');
 /* Language */
 Router::any('lang/(:any)', 'App\Controllers\Language@change');
 
+/* Busines */
+/* User */
+Router::get('/user/~getAll', 'App\Controllers\User@displayUsers');
+
 /** End default routes */
 
 /** Module routes. */

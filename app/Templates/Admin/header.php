@@ -15,6 +15,10 @@
     ]);
     echo $css; //place to pass data / plugable hook zone
     ?>
+    <script>
+        DIR = <?= DIR ?>;
+        TOKEN = '<?= Session::get('token') ?>';
+    </script>
 </head>
 <body>
 <?php echo $afterBody; //place to pass data / plugable hook zone?>
@@ -57,7 +61,7 @@
                     <li class="user <?php if($key == 'user') echo 'active'; ?> "><a href="#"><i class="fa fa-users"></i> <span
                                 class="nav-label">Người dùng</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý người dùng</a></li>
+                            <li><a href="<?=DIR;?>admin/~user">Quản lý người dùng</a></li>
                             <li><a href="<?=DIR;?>admin/dashboard">Quản lý vai trò</a></li>
                             <li><a href="<?=DIR;?>admin/dashboard">Quản lý quyền hạn</a></li>
                         </ul>

@@ -5,6 +5,7 @@ use Core\Controller;
 use Helpers\Session;
 use Helpers\Url;
 use Helpers\Password;
+use Helpers\Csrf;
 
 class User extends Controller{
 
@@ -17,21 +18,24 @@ class User extends Controller{
 
 	public function login(){
 		$username = $_POST['username'];
-		if(Session::get('admin') === true){
+		if(Session::get('username')){
 			Url::redirect('admin/~dashboard');
 		}
 
 		$data = $this->users->getMemberHash($username);
 
+		if(!Csrf::isTokenValid('token')){
+			$error = 'Mã chống crsf không đúng, xin vui lòng Ctrl + F5 để refresh lại trang';
+		}
+
 		if(Password::verify($_POST['password'], $data[0]->password)){
 				$token = uniqid();
-				$updata = array('token'=>$token);
+				$updata = array('token'=>Session::get('token'));
 				$where = array('id'=>$data[0]->id);
 				$this->users->update($updata,$where);
 				Session::set('adminId',$data[0]->id);
 				Session::set('username',$data[0]->username);
 				Session::set('fullname',$data[0]->fullname);
-				Session::set("token",$token);
 				Url::redirect('admin/~dashboard');
 			} else {
 				$error = 'Sai tên đăng nhập hoặc mật khẩu, hoặc tài khoản của bạn chưa được kích hoạt';
@@ -48,5 +52,13 @@ class User extends Controller{
 	public function logout(){
 		Session::destroy();
 		Url::redirect('admin/login');
+	}
+
+	public function displayUsers(){
+		if(!Session::get('username')){
+			echo json_encode(array('error' => 'Không thể thực hiện được lệnh này'));
+		}else{
+			echo json_encode($this->users->getAllUsers());
+		}
 	}
 }

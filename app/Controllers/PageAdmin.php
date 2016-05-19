@@ -4,6 +4,8 @@ use Core\View;
 use Core\Controller;
 use Helpers\Session;
 use Helpers\Url;
+use Helpers\Csrf;
+
 class PageAdmin extends Controller {	
 
 	public function __construct()
@@ -12,6 +14,7 @@ class PageAdmin extends Controller {
         if(Session::get('username') === null){
             Url::redirect('admin/login');
         }
+
     }
     //Dashboard index
     public function dashboard(){
@@ -54,6 +57,12 @@ class PageAdmin extends Controller {
         View::renderTemplate('header', $data,'admin');
         View::render('Admin/User', $data);
         View::renderTemplate('footer', $data,'admin');
+    }
+
+    public function showInfo(){
+        $id = $_GET('id');
+        $token = $_GET('token');
+        $object = $_GET('object');
     }
 
 }
