@@ -22,7 +22,7 @@ Router::post('/admin/login','App\Controllers\User@login');
 Router::get('/admin/logout','App\Controllers\User@logout');
 
 /* Admin Page */
-Router::get('/admin','App\Controllers\PageAdmin@dashboard');
+Router::get('/admin/','App\Controllers\PageAdmin@dashboard');
 Router::get('/admin/~dashboard','App\Controllers\PageAdmin@dashboard');
 Router::get('/admin/~preference','App\Controllers\PageAdmin@preference');
 Router::get('/admin/~about-us','App\Controllers\PageAdmin@aboutUs');
@@ -39,6 +39,8 @@ Router::any('lang/(:any)', 'App\Controllers\Language@change');
 /* Busines */
 /* User */
 Router::get('/user/~getAll', 'App\Controllers\User@displayUsers');
+Router::get('/admin/~showInfo','App\Controllers\PageAdmin@showInfo');
+Router::get('/admin/~create','App\Controllers\PageAdmin@createPage');
 
 /** End default routes */
 

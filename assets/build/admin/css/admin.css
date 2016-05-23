@@ -21572,6 +21572,11 @@ li.user,li.exam,li.news{
   -webkit-border-radius :0px;
 }
 
+.inline-show{
+  padding: 10px;
+  border-bottom: 1px solid dashed;
+}
+
 .btn-crud {
   margin-right: 5px !important;
 }

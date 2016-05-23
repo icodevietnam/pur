@@ -7516,6 +7516,10 @@ li.user,li.exam,li.news{
   -webkit-border-radius :0px;
 }
 
+.inline-show{
+  padding: 10px;
+}
+
 .btn-crud {
   margin-right: 5px !important;
 }

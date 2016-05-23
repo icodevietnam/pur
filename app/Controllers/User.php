@@ -61,4 +61,5 @@ class User extends Controller{
 			echo json_encode($this->users->getAllUsers());
 		}
 	}
+
 }

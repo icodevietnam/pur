@@ -1,32 +1,8 @@
-2016-05-19 0:39AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
+2016-05-21 21:24PM - require(/Applications/XAMPP/xamppfiles/htdocs/pur/app/Views/Error/404.php): failed to open stream: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/View.php on line 35
 
-2016-05-19 7:07AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
+2016-05-21 21:35PM - require(/Applications/XAMPP/xamppfiles/htdocs/pur/app/Views/Error/404.php): failed to open stream: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/View.php on line 35
 
-2016-05-19 7:07AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
+2016-05-22 21:39PM - require(/Applications/XAMPP/xamppfiles/htdocs/pur/app/Views/Error/404.php): failed to open stream: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/View.php on line 35
 
-2016-05-19 7:08AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 7:08AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 7:09AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 8:52AM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 12:51PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 12:51PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 12:51PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 12:52PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 12:53PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 12:54PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 13:01PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 21:59PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
-
-2016-05-19 21:59PM - require(C:\xampp\htdocs\pur\app/Views/Error/404.php): failed to open stream: No such file or directory in C:\xampp\htdocs\pur\system\Core\View.php on line 35
+2016-05-22 21:46PM - require(/Applications/XAMPP/xamppfiles/htdocs/pur/app/Views/Error/404.php): failed to open stream: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/View.php on line 35
 
