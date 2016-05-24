@@ -41,6 +41,7 @@ Router::any('lang/(:any)', 'App\Controllers\Language@change');
 Router::get('/user/~getAll', 'App\Controllers\User@displayUsers');
 Router::get('/admin/~showInfo','App\Controllers\PageAdmin@showInfo');
 Router::get('/admin/~create','App\Controllers\PageAdmin@createPage');
+Router::get('/admin/~edit','App\Controllers\PageAdmin@editPage');
 
 /** End default routes */
 

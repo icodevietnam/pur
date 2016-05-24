@@ -99,7 +99,30 @@ class PageAdmin extends Controller {
             $data['title'] = 'Người dùng';
             $data['obj'] = $object;
             $data['link'] = DIR.'admin/~user';
+            $pagePath = 'Admin/User/CreateUser';
+        }
+
+        View::renderTemplate('header', $data,'admin');
+        View::render($pagePath,$data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+
+    public function editPage(){
+        $id = $_GET['id'];
+        $token = $_GET['token'];
+        $object = $_GET['object'];
+        $pagePath = '';
+
+        if($token != Session::get('token') || $token === ''){
+            Url::redirect('/admin/login');
+        }
+
+        if($object === 'users'){
+            $data['title'] = 'Người dùng';
+            $data['obj'] = $object;
+            $data['link'] = DIR.'admin/~user';
             $pagePath = 'Admin/User/EditUser';
+            $data['result'] = $this->users->getUserWithoutPassword($id);
         }
 
         View::renderTemplate('header', $data,'admin');

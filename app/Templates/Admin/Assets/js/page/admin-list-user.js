@@ -21,8 +21,8 @@ var User = {
                     dataItems.push([
                         i,
                         value.username,value.fullname,value.email,value.active == 1 ? "<span class='glyphicon glyphicon-ok' aria-hidden='true'></span>" : "",
-                        "<a class='btn btn-crud btn-sm btn-info' href='"+ DIR +"admin/~showInfo?id="+ value.id +"&token="+ TOKEN +"&object="+ User.object +"' ><span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span></a>" +
-                        "<a class='btn btn-crud btn-sm btn-default' href='user/~showInfo?userId="+ value.id +"&token="+ TOKEN +"' ><span class='glyphicon glyphicon-pencil' aria-hidden='true'></a>" +
+                        "<a title='Xem thông tin' class='btn btn-crud btn-sm btn-info' href='"+ DIR +"admin/~showInfo?id="+ value.id +"&token="+ TOKEN +"&object="+ User.object +"' ><span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span></a>" +
+                        "<a title='Chỉnh sửa người dùng' class='btn btn-crud btn-sm btn-default' href='"+ DIR +"admin/~edit?id="+ value.id +"&token="+ TOKEN +"&object="+ User.object +"' ><span class='glyphicon glyphicon-pencil' aria-hidden='true'></a>" +
                         "<button class='btn btn-crud btn-sm btn-danger' onclick='deleteItem(" + value.id + ");'><span class='glyphicon glyphicon-trash' aria-hidden='true'></button>"
                     ]);
                 });

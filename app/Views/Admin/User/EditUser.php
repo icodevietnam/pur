@@ -11,24 +11,25 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" placeholder="Username">
+              <input type="text" class="form-control" readonly name='username' value="<?= $result[0]->username ?>"  placeholder="Username">
             </div>
           </div>
           <div class="form-group">
             <label for="email" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="email" placeholder="Email">
+              <input type="text" class="form-control" id="email" value="<?= $result[0]->email ?>" placeholder="Email">
             </div>
           </div>
           <div class="form-group">
             <label for="fullName" class="col-sm-2 control-label">Full Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+              <input type="text" class="form-control" name='fullName' value="<?= $result[0]->fullname ?>" placeholder="Full Name">
             </div>
           </div>
           <div class="form-group">
-            <div class="col-sm-10">
-              <button class="btn btn-primary" type="">Create</button>
+            <div class="col-sm-3 pull-right">
+              <button class="btn btn-primary">Sửa</button>
+              <button type="reset" class="btn btn-default">Xóa</button>
             </div>
           </div>
         </form>
