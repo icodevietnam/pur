@@ -42,6 +42,7 @@ Router::get('/user/~getAll', 'App\Controllers\User@displayUsers');
 Router::get('/admin/~showInfo','App\Controllers\PageAdmin@showInfo');
 Router::get('/admin/~create','App\Controllers\PageAdmin@createPage');
 Router::get('/admin/~edit','App\Controllers\PageAdmin@editPage');
+Router::get('/admin/~create','App\Controllers\User@create');
 
 /** End default routes */
 

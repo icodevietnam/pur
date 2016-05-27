@@ -1,18 +1,18 @@
 $(function() {
 	StringUtil.setMessage(escapeHtml("Ghi chú : Bạn sẽ tạo được người dùng mới."),'alert-info');
-	createUserForm.validate();
+	createUserForm.init();
 });
 
 var createUserForm = {
 	init : function(){
-
+		this.validate();
 	},
 	validate : function(){
 		$('#createForm').validate({
 			rules : {
 				username :{
 					required :true,
-					minlength : 6
+					minlength : 6,
 				},
 				password : {
 					required : true,
@@ -54,7 +54,11 @@ var createUserForm = {
 		});
 	},
 	submit : function(){
-		alert('Dep trai');
+		$.ajax({
+			url: DIR + "user/~create",
+            type: "GET",
+            dataType: "JSON",
+		});
 	}
 }
 

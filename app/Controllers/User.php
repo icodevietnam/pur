@@ -62,4 +62,28 @@ class User extends Controller{
 		}
 	}
 
+	public function create(){
+		$message = null;
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		$email = $_POST['email'];
+		$fullname = $_POST['fullName'];
+		$token = $_POST['token'];
+
+		if($token != Session::get('token') || $token === ''){
+			$message = array('message' => 'Can not get the result because the token is wrong');
+            echo json_encode(value);
+        }else{
+        	
+        }
+	}
+
+	public function checkUsername(){
+
+	}
+
+	public function checkEmail(){
+
+	}
+
 }
