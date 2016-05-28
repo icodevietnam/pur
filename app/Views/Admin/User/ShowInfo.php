@@ -36,7 +36,11 @@
 						<strong>Hoạt động:</strong>
 					</div>
 					<div class="col-lg-8">
-						<?= $result[0]->active ?>
+						<? if($result[0]->active=='1'){
+								echo "Đang hoạt động";
+							} else {
+								echo "Chưa kích hoạt";
+							}?>
 					</div>
 				</div>
 				<div class="row inline-show">
