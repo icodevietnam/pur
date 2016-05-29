@@ -30,7 +30,8 @@ Router::get('/admin/~language','App\Controllers\PageAdmin@language');
 
 /* User Admin Page */
 Router::get('/admin/~user','App\Controllers\PageAdmin@user');
-
+/* Role Admin Page */
+Router::get('/admin/~role','App\Controllers\PageAdmin@role');
 
 
 /* Language */
@@ -42,7 +43,18 @@ Router::get('/user/~getAll', 'App\Controllers\User@displayUsers');
 Router::get('/admin/~showInfo','App\Controllers\PageAdmin@showInfo');
 Router::get('/admin/~create','App\Controllers\PageAdmin@createPage');
 Router::get('/admin/~edit','App\Controllers\PageAdmin@editPage');
-Router::get('/admin/~create','App\Controllers\User@create');
+Router::post('/user/~create','App\Controllers\User@create');
+Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
+Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');
+Router::post('/user/~delete','App\Controllers\User@delete');
+Router::post('/user/~edit','App\Controllers\User@edit');
+
+/* Role */
+Router::post('/user/~create','App\Controllers\User@create');
+Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
+Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');
+Router::post('/user/~delete','App\Controllers\User@delete');
+Router::post('/user/~edit','App\Controllers\User@edit');
 
 /** End default routes */
 

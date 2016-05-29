@@ -68,22 +68,65 @@ class User extends Controller{
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 		$fullname = $_POST['fullName'];
+		$active = $_POST['active'];
 		$token = $_POST['token'];
 
-		if($token != Session::get('token') || $token === ''){
-			$message = array('message' => 'Can not get the result because the token is wrong');
-            echo json_encode(value);
+		if($token !== Session::get('token') || $token === ''){
+			$message = array('message' => 'Sai mã token');
         }else{
-        	
+        	$obj = array('username'=>htmlspecialchars($username),'password'=>htmlspecialchars(Password::make($password)),'email'=>htmlspecialchars($email),'fullname'=>htmlspecialchars($fullname),'active'=>htmlspecialchars($active));
+        	if($this->users->add($obj) === true){
+        		$message = array('message' => 'Tạo user thành công');
+        	}else{
+        		$message = array('message' => 'Tạo user thất bại');
+        	}
         }
+        echo json_encode($message);
 	}
 
 	public function checkUsername(){
-
+		$username = $_GET['username'];
+		echo json_encode($this->users->checkUsername($username));
 	}
 
 	public function checkEmail(){
+		$email = $_GET['email'];
+		$oldEmail = $_GET('oldEmail');
+		echo json_encode($this->users->checkEmail($email,$oldEmail));
+	}
 
+	public function delete(){
+		$id = $_POST['id'];
+		$token = $_POST['token'];
+
+		if($token !== Session::get('token') || $token === ''){
+			echo json_encode(false);
+        }else{
+        	echo json_encode($this->users->delete($id));
+        }
+
+	}
+
+	public function edit(){
+		$message = null;
+		$id = $_POST['id'];
+		$token = $_POST['token'];
+		$email = $_POST['email'];
+		$active = $_POST['active'];
+		$fullname = $_POST['fullName'];
+
+		if($token !== Session::get('token') || $token === ''){
+			$message = array('message' => 'Sai mã token');
+        }else{
+        	$obj=array('email'=>htmlspecialchars($email),'fullname'=>htmlspecialchars($fullname),'active'=>htmlspecialchars($active));
+        	$where = array('id'=>$id);
+        	if($this->users->update($obj,$where) === true){
+        		$message = array('message' => 'Tạo user thành công');
+        	}else{
+        		$message = array('message' => 'Tạo user thất bại');
+        	}
+        }
+        echo json_encode($message);
 	}
 
 }

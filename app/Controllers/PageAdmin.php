@@ -56,9 +56,16 @@ class PageAdmin extends Controller {
     public function user(){
         $data['title'] = 'Người dùng';
         $data['key'] = 'user';
-        $data['link'] = DIR.'admin/~user';
         View::renderTemplate('header', $data,'admin');
         View::render('Admin/User', $data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+
+    public function role(){
+        $data['title'] = 'Quyền';
+        $data['key'] = 'user';
+        View::renderTemplate('header', $data,'admin');
+        View::render('Admin/Role', $data);
         View::renderTemplate('footer', $data,'admin');
     }
 
@@ -75,7 +82,6 @@ class PageAdmin extends Controller {
         if($object === 'users'){
             $data['title'] = 'Người dùng';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~user';
             $pagePath = 'Admin/User/ShowInfo';
             $data['result'] = $this->users->getUserWithoutPassword($id);
         }
@@ -100,6 +106,11 @@ class PageAdmin extends Controller {
             $data['obj'] = $object;
             $data['link'] = DIR.'admin/~user';
             $pagePath = 'Admin/User/CreateUser';
+        }else if($object === 'roles'){
+            $data['title'] = 'Quyền';
+            $data['obj'] = $object;
+            $data['link'] = DIR.'admin/~role';
+            $pagePath = 'Admin/User/CreateRole';
         }
 
         View::renderTemplate('header', $data,'admin');

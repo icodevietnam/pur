@@ -2,8 +2,8 @@
   <div class="col-lg-12">
     <div class="ibox">
       <div class="ibox-content">
-        <code class="crud-message"></code>
-        <a href="<?=DIR;?>admin/~language" class="btn-link">
+        <div class="alert"></div>
+        <a href="<?=DIR;?>admin/~user" class="btn-link">
           <h2>Người dùng</h2>
         </a>
         <hr />
@@ -20,6 +20,6 @@
 
 <?php
 Assets::js([
-    Url::templateAdminPath().'js/page/admin-list-user.js',
+    Url::templateAdminPath().'js/page/admin-list-role.js',
 ]);
 ?>
