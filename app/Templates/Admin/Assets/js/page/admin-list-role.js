@@ -58,12 +58,12 @@ var Role = {
         });
     },
     delete : function(id){
-        confirm('Bạn muốn xóa ?','Xóa','Có',User.ajaxDelete,id);
+        confirm('Bạn muốn xóa ?','Xóa','Có',Role.ajaxDelete,id);
     },
     ajaxDelete : function(id){
         //console.log('Dep trai');
         $.ajax({
-            url: DIR + "user/~delete",
+            url: DIR + "role/~delete",
             type: "POST",
             data : {
                 id : id,
@@ -74,7 +74,7 @@ var Role = {
                 $('#pleaseWaitDialog').modal('show');
             },
             success: function(response) {
-                User.displayTable();
+                Role.displayTable();
             },
             complete : function(){
                 $('#pleaseWaitDialog').modal('hide');

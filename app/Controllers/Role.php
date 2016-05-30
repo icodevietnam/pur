@@ -23,4 +23,37 @@ class Role extends Controller{
 			echo json_encode($this->roles->getAll());
 		}
 	}
+
+	public function create(){
+		$message = null;
+		$name = $_POST['name'];
+		$description = $_POST['description'];
+		$icon = $_POST['icon'];
+		$active = $_POST['active'];
+		$token = $_POST['token'];
+
+		if($token !== Session::get('token') || $token === ''){
+			$message = array('message' => 'Sai mã token');
+        }else{
+        	$obj = array('name'=>htmlspecialchars($name),'description'=>htmlspecialchars($description),'icon'=>htmlspecialchars($icon));
+        	if($this->roles->add($obj) === true){
+        		$message = array('message' => 'Tạo user thành công');
+        	}else{
+        		$message = array('message' => 'Tạo user thất bại');
+        	}
+        }
+        echo json_encode($message);
+	}
+
+	public function delete(){
+		$id = $_POST['id'];
+		$token = $_POST['token'];
+
+		if($token !== Session::get('token') || $token === ''){
+			echo json_encode(false);
+        }else{
+        	echo json_encode($this->roles->delete($id));
+        }
+
+	}
 }

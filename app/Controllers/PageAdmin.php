@@ -9,14 +9,16 @@ use Helpers\Csrf;
 class PageAdmin extends Controller {	
 
     private $users;
+    private $roles;
 
 	public function __construct()
     {
         parent::__construct();
         if(Session::get('username') === null){
-            Url::redirect('/admin/login');
+            Url::redirect('admin/login');
         }
         $this->users = new \App\Models\Users();
+        $this->roles = new \App\Models\Roles();
     }
     //Dashboard index
     public function dashboard(){
@@ -76,7 +78,7 @@ class PageAdmin extends Controller {
         $pagePath = '';
 
         if($token != Session::get('token') || $token === ''){
-            Url::redirect('/admin/login');
+            Url::redirect('admin/login');
         }
 
         if($object === 'users'){
@@ -84,6 +86,11 @@ class PageAdmin extends Controller {
             $data['obj'] = $object;
             $pagePath = 'Admin/User/ShowInfo';
             $data['result'] = $this->users->getUserWithoutPassword($id);
+        }else if ($object === 'roles') {
+            $data['title'] = 'Quyền';
+            $data['obj'] = $object;
+            $pagePath = 'Admin/Role/ShowInfo';
+            $data['result'] = $this->roles->get($id);
         }
 
         View::renderTemplate('header', $data,'admin');
@@ -98,7 +105,7 @@ class PageAdmin extends Controller {
         $pagePath = '';
 
         if($token != Session::get('token') || $token === ''){
-            Url::redirect('/admin/login');
+            Url::redirect('admin/login');
         }
 
         if($object === 'users'){
@@ -110,7 +117,7 @@ class PageAdmin extends Controller {
             $data['title'] = 'Quyền';
             $data['obj'] = $object;
             $data['link'] = DIR.'admin/~role';
-            $pagePath = 'Admin/User/CreateRole';
+            $pagePath = 'Admin/Role/CreateRole';
         }
 
         View::renderTemplate('header', $data,'admin');
@@ -125,7 +132,7 @@ class PageAdmin extends Controller {
         $pagePath = '';
 
         if($token != Session::get('token') || $token === ''){
-            Url::redirect('/admin/login');
+            Url::redirect('admin/login');
         }
 
         if($object === 'users'){

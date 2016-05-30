@@ -54,7 +54,9 @@ Router::post('/user/~edit','App\Controllers\User@edit');
 
 /* Role */
 Router::get('/role/~getAll', 'App\Controllers\Role@displayRoles');
-// Router::post('/user/~create','App\Controllers\User@create');
+Router::post('/role/~create','App\Controllers\Role@create');
+Router::post('/role/~delete','App\Controllers\Role@delete');
+
 // Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
 // Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');
 // Router::post('/user/~delete','App\Controllers\User@delete');
