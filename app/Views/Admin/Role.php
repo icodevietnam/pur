@@ -7,7 +7,7 @@
           <h2>Quyền</h2>
         </a>
         <hr />
-        <a href="<?=DIR?>admin/~create?token=<?= Session::get('token') ?>&object=users" data-toggle="modal" class="btn btn-sm btn-primary">Tạo mới quyền</a>
+        <a href="<?=DIR?>admin/~create?token=<?= Session::get('token') ?>&object=roles" data-toggle="modal" class="btn btn-sm btn-primary">Tạo mới quyền</a>
         <div class="table-responsive">
           <table id="tblItems"
               class="table table-bordered table-hover table-striped">
@@ -20,6 +20,6 @@
 
 <?php
 Assets::js([
-    Url::templateAdminPath().'js/page/admin-list-user.js',
+    Url::templateAdminPath().'js/page/admin-list-role.js',
 ]);
 ?>

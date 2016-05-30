@@ -54,9 +54,14 @@ class Config
         define('LOGIN', 'Login');
 
         /**
-         * Set the default template.
+         * Set the admin template.
          */
         define('ADMIN', 'Admin');
+
+        /**
+         * Set the error template.
+         */
+        define('ERROR', 'Error');
 
         /**
          * Set salt

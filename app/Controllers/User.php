@@ -91,7 +91,7 @@ class User extends Controller{
 
 	public function checkEmail(){
 		$email = $_GET['email'];
-		$oldEmail = $_GET('oldEmail');
+		$oldEmail = $_GET['oldEmail'];
 		echo json_encode($this->users->checkEmail($email,$oldEmail));
 	}
 

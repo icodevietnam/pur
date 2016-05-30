@@ -18,7 +18,7 @@ class Users extends Commons
 	}
 
 	public function getAllUsers(){
-		return $this->db->select("SELECT id,username,fullname,email,active FROM ".PREFIX.$this->tableName." ");
+		return $this->db->select("SELECT id,username,fullname,email,active FROM ".PREFIX.$this->tableName." ORDER BY ID DESC ");
 	}
 
 	public function getUserWithoutPassword($id){

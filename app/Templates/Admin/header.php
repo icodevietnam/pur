@@ -62,7 +62,7 @@
                                 class="nav-label">Người dùng</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="<?=DIR;?>admin/~user">Quản lý người dùng</a></li>
-                            <li><a href="<?=DIR;?>admin/dashboard">Quản lý vai trò</a></li>
+                            <li><a href="<?=DIR;?>admin/~role">Quản lý vai trò</a></li>
                             <li><a href="<?=DIR;?>admin/dashboard">Quản lý quyền hạn</a></li>
                         </ul>
                     </li>

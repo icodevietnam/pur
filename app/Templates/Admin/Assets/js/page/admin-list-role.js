@@ -1,14 +1,14 @@
 $(function() {
-	StringUtil.setMessage(escapeHtml("Ghi chú : Bạn có thể thêm xoá sửa người dùng trang admin."),'alert-info');
-	User.displayTable();
+	StringUtil.setMessage(escapeHtml("Ghi chú : Bạn có thể thêm xoá sửa quyền trang admin."),'alert-info');
+	Role.displayTable();
 });
 
 var Role = {
-	object : 'users',
+	object : 'roles',
     displayTable: function() {
         var dataItems = [];
         $.ajax({
-            url: DIR + "user/~getAll",
+            url: DIR + "role/~getAll",
             type: "GET",
             dataType: "JSON",
             beforeSend : function(){
@@ -20,10 +20,10 @@ var Role = {
                     i++;
                     dataItems.push([
                         i,
-                        value.username,value.fullname,value.email,value.active == 1 ? "<span class='glyphicon glyphicon-ok' aria-hidden='true'></span>" : "",
-                        "<a title='Xem thông tin' class='btn btn-crud btn-sm btn-info' href='"+ DIR +"admin/~showInfo?id="+ value.id +"&token="+ TOKEN +"&object="+ User.object +"' ><span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span></a>" +
-                        "<a title='Chỉnh sửa người dùng' class='btn btn-crud btn-sm btn-default' href='"+ DIR +"admin/~edit?id="+ value.id +"&token="+ TOKEN +"&object="+ User.object +"' ><span class='glyphicon glyphicon-pencil' aria-hidden='true'></a>" +
-                        "<a title='Xóa người dùng' class='btn btn-crud btn-sm btn-danger' onclick='User.delete(" + value.id + ");'><span class='glyphicon glyphicon-trash' aria-hidden='true'></button>"
+                        value.name,value.description,value.icon,
+                        "<a title='Xem thông tin' class='btn btn-crud btn-sm btn-info' href='"+ DIR +"admin/~showInfo?id="+ value.id +"&token="+ TOKEN +"&object="+ Role.object +"' ><span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span></a>" +
+                        "<a title='Chỉnh sửa người dùng' class='btn btn-crud btn-sm btn-default' href='"+ DIR +"admin/~edit?id="+ value.id +"&token="+ TOKEN +"&object="+ Role.object +"' ><span class='glyphicon glyphicon-pencil' aria-hidden='true'></a>" +
+                        "<a title='Xóa người dùng' class='btn btn-crud btn-sm btn-danger' onclick='Role.delete(" + value.id + ");'><span class='glyphicon glyphicon-trash' aria-hidden='true'></button>"
                     ]);
                 });
                 $('#tblItems').dataTable({
@@ -38,13 +38,11 @@ var Role = {
                     "aoColumns": [{
                         "sTitle": "No"
                     }, {
-                        "sTitle": "Tên đăng nhập"
+                        "sTitle": "Tên"
                     }, {
-                        "sTitle": "Tên đầy đủ"
+                        "sTitle": "Diễn giải"
                     }, {
-                        "sTitle": "Thư điện tử"
-                    }, {
-                        "sTitle": "Đang hoạt động"
+                        "sTitle": "Hình"
                     }, {
                         "sTitle": "Hành động"
                     }]

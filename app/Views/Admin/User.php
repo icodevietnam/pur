@@ -20,6 +20,6 @@
 
 <?php
 Assets::js([
-    Url::templateAdminPath().'js/page/admin-list-role.js',
+    Url::templateAdminPath().'js/page/admin-list-user.js',
 ]);
 ?>

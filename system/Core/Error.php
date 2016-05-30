@@ -38,9 +38,9 @@ class Error extends Controller
         $data['title'] = '404';
         $data['error'] = $error ? $error : $this->error;
 
-        View::renderTemplate('header', $data);
+        View::renderTemplate('header', $data,'error');
         View::render('Error/404', $data);
-        View::renderTemplate('footer', $data);
+        View::renderTemplate('footer', $data,'error');
     }
 
     /**

@@ -9,6 +9,9 @@ $router = Router::getInstance();
 
 /** Define static routes. */
 
+/* Error Page */
+Router::get('/404','App\Controllers\PageError@error404');
+
 /* Home Page */
 Router::get('/','App\Controllers\PageHome@index');
 Router::get('/home','App\Controllers\PageHome@index');
@@ -50,11 +53,12 @@ Router::post('/user/~delete','App\Controllers\User@delete');
 Router::post('/user/~edit','App\Controllers\User@edit');
 
 /* Role */
-Router::post('/user/~create','App\Controllers\User@create');
-Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
-Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');
-Router::post('/user/~delete','App\Controllers\User@delete');
-Router::post('/user/~edit','App\Controllers\User@edit');
+Router::get('/role/~getAll', 'App\Controllers\Role@displayRoles');
+// Router::post('/user/~create','App\Controllers\User@create');
+// Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
+// Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');
+// Router::post('/user/~delete','App\Controllers\User@delete');
+// Router::post('/user/~edit','App\Controllers\User@edit');
 
 /** End default routes */
 
