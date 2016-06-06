@@ -68,13 +68,14 @@ class User extends Controller{
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 		$fullname = $_POST['fullName'];
+		$roleId = $_POST['roles'];
 		$active = $_POST['active'];
 		$token = $_POST['token'];
 
 		if($token !== Session::get('token') || $token === ''){
 			$message = array('message' => 'Sai mã token');
         }else{
-        	$obj = array('username'=>htmlspecialchars($username),'password'=>htmlspecialchars(Password::make($password)),'email'=>htmlspecialchars($email),'fullname'=>htmlspecialchars($fullname),'active'=>htmlspecialchars($active));
+        	$obj = array('username'=>htmlspecialchars($username),'password'=>htmlspecialchars(Password::make($password)),'email'=>htmlspecialchars($email),'fullname'=>htmlspecialchars($fullname),'active'=>htmlspecialchars($active),'roleId'=>htmlspecialchars($roleId));
         	if($this->users->add($obj) === true){
         		$message = array('message' => 'Tạo user thành công');
         	}else{
@@ -113,12 +114,13 @@ class User extends Controller{
 		$token = $_POST['token'];
 		$email = $_POST['email'];
 		$active = $_POST['active'];
+		$roleId = $_POST['roles'];
 		$fullname = $_POST['fullName'];
 
 		if($token !== Session::get('token') || $token === ''){
 			$message = array('message' => 'Sai mã token');
         }else{
-        	$obj=array('email'=>htmlspecialchars($email),'fullname'=>htmlspecialchars($fullname),'active'=>htmlspecialchars($active));
+        	$obj=array('email'=>htmlspecialchars($email),'fullname'=>htmlspecialchars($fullname),'active'=>htmlspecialchars($active),'roleId'=>htmlspecialchars($roleId));
         	$where = array('id'=>$id);
         	if($this->users->update($obj,$where) === true){
         		$message = array('message' => 'Tạo user thành công');

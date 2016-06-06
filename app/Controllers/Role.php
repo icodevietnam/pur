@@ -37,9 +37,9 @@ class Role extends Controller{
         }else{
         	$obj = array('name'=>htmlspecialchars($name),'description'=>htmlspecialchars($description),'icon'=>htmlspecialchars($icon));
         	if($this->roles->add($obj) === true){
-        		$message = array('message' => 'Tạo user thành công');
+        		$message = array('message' => 'Tạo role thành công');
         	}else{
-        		$message = array('message' => 'Tạo user thất bại');
+        		$message = array('message' => 'Tạo role thất bại');
         	}
         }
         echo json_encode($message);
@@ -55,5 +55,27 @@ class Role extends Controller{
         	echo json_encode($this->roles->delete($id));
         }
 
+	}
+
+	public function edit(){
+		$message = null;
+		$id = $_POST['id'];
+		$token = $_POST['token'];
+		$name = $_POST['name'];
+		$description = $_POST['description'];
+		$icon = $_POST['icon'];
+
+		if($token !== Session::get('token') || $token === ''){
+			$message = array('message' => 'Sai mã token');
+        }else{
+        	$obj=array('name'=>htmlspecialchars($name),'description'=>htmlspecialchars($description),'icon'=>htmlspecialchars($icon));
+        	$where = array('id'=>$id);
+        	if($this->roles->update($obj,$where) === true){
+        		$message = array('message' => 'Tạo role thành công');
+        	}else{
+        		$message = array('message' => 'Tạo role	 thất bại');
+        	}
+        }
+        echo json_encode($message);
 	}
 }

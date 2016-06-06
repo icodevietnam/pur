@@ -41,6 +41,17 @@
             </div>
           </div>
           <div class="form-group">
+            <label for="fullName" class="col-sm-2 control-label">Quyền</label>
+            <div class="col-sm-10">
+              <select name="roles" class="form-control">
+                <? foreach($roles as $role){ ?>
+                  <option value="<?= $role->id ?>"><?= $role->description ?></option>
+                  option
+                <? }?>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
             <div class="col-sm-3 pull-right">
               <button type="button" onclick="updateUserForm.submit()" class="btn btn-primary">Sửa</button>
               <button type="reset" class="btn btn-default">Xóa</button>

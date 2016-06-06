@@ -112,6 +112,7 @@ class PageAdmin extends Controller {
             $data['title'] = 'Người dùng';
             $data['obj'] = $object;
             $data['link'] = DIR.'admin/~user';
+            $data['roles'] = $this->roles->getAll();
             $pagePath = 'Admin/User/CreateUser';
         }else if($object === 'roles'){
             $data['title'] = 'Quyền';
@@ -140,7 +141,14 @@ class PageAdmin extends Controller {
             $data['obj'] = $object;
             $data['link'] = DIR.'admin/~user';
             $pagePath = 'Admin/User/EditUser';
+            $data['roles'] = $this->roles->getAll();
             $data['result'] = $this->users->getUserWithoutPassword($id);
+        }else if($object === 'roles'){
+            $data['title'] = 'Quyền';
+            $data['obj'] = $object;
+            $data['link'] = DIR.'admin/~role';
+            $pagePath = 'Admin/Role/EditRole';
+            $data['result'] = $this->roles->get($id);
         }
 
         View::renderTemplate('header', $data,'admin');

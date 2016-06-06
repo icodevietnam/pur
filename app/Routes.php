@@ -37,7 +37,7 @@ Router::get('/admin/~user','App\Controllers\PageAdmin@user');
 Router::get('/admin/~role','App\Controllers\PageAdmin@role');
 
 
-/* Language */
+/* Language */	
 Router::any('lang/(:any)', 'App\Controllers\Language@change');
 
 /* Busines */
@@ -55,6 +55,7 @@ Router::post('/user/~edit','App\Controllers\User@edit');
 /* Role */
 Router::get('/role/~getAll', 'App\Controllers\Role@displayRoles');
 Router::post('/role/~create','App\Controllers\Role@create');
+Router::post('/role/~edit','App\Controllers\Role@edit');
 Router::post('/role/~delete','App\Controllers\Role@delete');
 
 // Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
