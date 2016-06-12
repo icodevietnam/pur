@@ -54,6 +54,7 @@
                         <ul class="nav nav-second-level collapse">
                             <li><a href="<?=DIR;?>admin/~dashboard">Bảng điều khiển</a></li>
                             <li><a href="<?=DIR;?>admin/~preference">Thông tin chung</a></li>
+                            <li><a href="<?=DIR;?>admin/~shopInfo">Thông tin shop</a></li>
                             <li><a href="<?=DIR;?>admin/~about-us">Về chúng tôi</a></li>
                             <li><a href="<?=DIR;?>admin/~language">Ngôn ngữ</a></li>
                         </ul>

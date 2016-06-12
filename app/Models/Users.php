@@ -28,7 +28,7 @@ class Users extends Commons
 	public function checkUsername($username){
 		$data = null;
 		try {
-			$data = $this->db->select("SELECT * FROM ".PREFIX."users WHERE username =:username",array(':username' => $username));
+			$data = $this->db->select("SELECT * FROM ".PREFIX.$this->tableName." WHERE username =:username",array(':username' => $username));
 			if(count($data) >= 1){
 				return false;
 			}else{
@@ -44,10 +44,10 @@ class Users extends Commons
 		$data = null;
 		$para = null;
 		try {
-			$query = "SELECT * FROM ".PREFIX."users WHERE email =:email";
+			$query = "SELECT * FROM ".PREFIX.$this->tableName." WHERE email =:email";
 			$para = array(':email' => $email);
 			if(null != $oldEmail || ''=== $oldEmail){
-				$query.= $query.(" AND email <> :oldEmail");
+				$query= $query.(" AND email <> :oldEmail");
 				$para = array(':email' => $email,':oldEmail' => $oldEmail);
 			}
 			$data = $this->db->select($query,$para);

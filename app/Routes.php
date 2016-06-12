@@ -30,6 +30,7 @@ Router::get('/admin/~dashboard','App\Controllers\PageAdmin@dashboard');
 Router::get('/admin/~preference','App\Controllers\PageAdmin@preference');
 Router::get('/admin/~about-us','App\Controllers\PageAdmin@aboutUs');
 Router::get('/admin/~language','App\Controllers\PageAdmin@language');
+Router::get('/admin/~shopInfo','App\Controllers\PageAdmin@shopInfo');
 
 /* User Admin Page */
 Router::get('/admin/~user','App\Controllers\PageAdmin@user');
@@ -57,6 +58,13 @@ Router::get('/role/~getAll', 'App\Controllers\Role@displayRoles');
 Router::post('/role/~create','App\Controllers\Role@create');
 Router::post('/role/~edit','App\Controllers\Role@edit');
 Router::post('/role/~delete','App\Controllers\Role@delete');
+
+/* Language */
+Router::get('/language/~getAll', 'App\Controllers\Language@displayLangs');
+Router::post('/language/~create','App\Controllers\Language@create');
+Router::post('/language/~edit','App\Controllers\Language@edit');
+Router::post('/language/~delete','App\Controllers\Language@delete');
+Router::get('/language/~checkCode','App\Controllers\Language@checkCode');
 
 // Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
 // Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');

@@ -37,8 +37,13 @@
         <img src="<?= Url::imagePath() ?>/logo.png" />
     </a>
     <ul class="list-language right">
-      <li><a href="<?= DIR ?>lang/en"><?= Language::show('en', 'General'); ?></a></li>
-      <li><a href="<?= DIR ?>lang/vi"><?= Language::show('vi', 'General'); ?></a></li>
+      <?php 
+        foreach($languages as $value) {
+      ?>
+        <li><a href="<?= DIR ?>lang/<?= strtolower($value->code) ?>"><?= Language::show(strtolower($value->code), 'General'); ?></a></li> 
+      <?php 
+        }
+      ?>
     </ul>
 </div>
 <div class="container">

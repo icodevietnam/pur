@@ -1,34 +1,35 @@
 <div class="row">
-	<div class="col-lg-7">
-		<div class="ibox">
-			<div class="ibox-content">
-				<div class="alert"></div>
-				<a href="javascript:createRoleForm.currentUrl();" class="btn-link">
-					<h2>Thêm quyền vào</h2>
-				</a>
-				<hr />
-				<form id='createForm' class="form-horizontal">
+  <div class="col-lg-7">
+    <div class="ibox">
+      <div class="ibox-content">
+        <div class="alert"></div>
+        <a href="javascript:createUserForm.currentUrl();" class="btn-link">
+          <h2>Sửa thông tin vai trò</h2>
+        </a>
+        <hr />
+        <form id='editForm' class="form-horizontal">
           <div class="form-group">
-            <label for="username" class="col-sm-2 control-label">Tên</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Tên</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name='name' placeholder="Tên">
+              <input type="text" class="hide form-control" name='id' value="<?= $result[0]->id ?>" >
+              <input type="text" class="form-control" name='name' value="<?= $result[0]->name ?>"  placeholder="Tên">
             </div>
           </div>
           <div class="form-group">
-            <label for="description" class="col-sm-2 control-label">Diễn giải</label>
+            <label for="email" class="col-sm-2 control-label">Diễn giải</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name='description' placeholder="Diễn giải">
+              <input type="text" class="form-control" name='description' value="<?= $result[0]->description ?>" placeholder="Diễn giải">
             </div>
           </div>
           <div class="form-group">
-            <label for="icon" class="col-sm-2 control-label">Hình ảnh</label>
+            <label for="fullName" class="col-sm-2 control-label">Hình ảnh</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name='icon' placeholder="Hình ảnh">
+              <input type="text" class="form-control" name='icon' value="<?= $result[0]->icon ?>" placeholder="Hình ảnh">
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-3 pull-right">
-              <button type='button' onclick='createRoleForm.submit();' class="btn btn-primary">Thêm vào</button>
+              <button type="button" onclick="updateRoleForm.submit()" class="btn btn-primary">Sửa</button>
               <button type="reset" class="btn btn-default">Xóa</button>
             </div>
           </div>
@@ -38,11 +39,11 @@
   </div>
 </div>
 <p class="hidden object">
-	<?= $obj ?>
+  <?= $obj ?>
 </p>
 
 <?php
 Assets::js([
-    Url::templateAdminPath().'js/page/admin-create-role.js',
+  Url::templateAdminPath().'js/page/admin-update-role.js',
   ]);
 ?>

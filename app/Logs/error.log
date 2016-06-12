@@ -1,6 +1,6 @@
 Exception information:
 
-           Date: Jun 06, 2016 0:17AM
+           Date: Jun 13, 2016 0:46AM
 
            Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
 
@@ -13,13 +13,13 @@ Exception information:
            Stack trace:
 
            #0 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Helpers/Database.php(96): PDOStatement->execute()
-#1 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Models/Users.php(53): Helpers\Database->select('SELECT * FROM u...', Array)
-#2 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Controllers/User.php(96): app\Models\Users->checkEmail('nhatbang@gmail....', 'nhatbang@gmail....')
-#3 [internal function]: App\Controllers\User->checkEmail()
+#1 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Models/Languages.php(26): Helpers\Database->select('SELECT * FROM l...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Controllers/Language.php(95): app\Models\Languages->checkCode('Fr1', 'Fr')
+#3 [internal function]: App\Controllers\Language->checkCode()
 #4 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(193): call_user_func_array(Array, Array)
-#5 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'checkEmail', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'checkCode', Array)
 #6 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
-#7 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Routes.php(77): Core\Router->dispatch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Routes.php(85): Core\Router->dispatch()
 #8 /Applications/XAMPP/xamppfiles/htdocs/pur/index.php(74): require('/Applications/X...')
 #9 {main}
 
@@ -27,7 +27,7 @@ Exception information:
 
 Exception information:
 
-           Date: Jun 06, 2016 0:17AM
+           Date: Jun 13, 2016 0:57AM
 
            Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
 
@@ -40,13 +40,40 @@ Exception information:
            Stack trace:
 
            #0 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Helpers/Database.php(96): PDOStatement->execute()
-#1 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Models/Users.php(53): Helpers\Database->select('SELECT * FROM u...', Array)
-#2 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Controllers/User.php(96): app\Models\Users->checkEmail('icoding.active@...', 'icoding.active@...')
-#3 [internal function]: App\Controllers\User->checkEmail()
+#1 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Models/Languages.php(26): Helpers\Database->select('SELECT * FROM l...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Controllers/Language.php(95): app\Models\Languages->checkCode('Fr1', 'Fr')
+#3 [internal function]: App\Controllers\Language->checkCode()
 #4 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(193): call_user_func_array(Array, Array)
-#5 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'checkEmail', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'checkCode', Array)
 #6 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
-#7 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Routes.php(77): Core\Router->dispatch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Routes.php(85): Core\Router->dispatch()
+#8 /Applications/XAMPP/xamppfiles/htdocs/pur/index.php(74): require('/Applications/X...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jun 13, 2016 0:57AM
+
+           Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+           Code: HY093
+
+           File: /Applications/XAMPP/xamppfiles/htdocs/pur/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Models/Languages.php(26): Helpers\Database->select('SELECT * FROM l...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Controllers/Language.php(95): app\Models\Languages->checkCode('Fr1', 'Fr')
+#3 [internal function]: App\Controllers\Language->checkCode()
+#4 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'checkCode', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/pur/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/pur/app/Routes.php(85): Core\Router->dispatch()
 #8 /Applications/XAMPP/xamppfiles/htdocs/pur/index.php(74): require('/Applications/X...')
 #9 {main}
 

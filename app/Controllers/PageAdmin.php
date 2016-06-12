@@ -19,6 +19,7 @@ class PageAdmin extends Controller {
         }
         $this->users = new \App\Models\Users();
         $this->roles = new \App\Models\Roles();
+        $this->languages = new \App\Models\Languages();
     }
     //Dashboard index
     public function dashboard(){
@@ -35,6 +36,15 @@ class PageAdmin extends Controller {
         $data['key'] = 'general';
         View::renderTemplate('header', $data,'admin');
         View::render('Admin/Preference', $data);
+        View::renderTemplate('footer', $data,'admin');
+    }
+
+    //Shop Info
+    public function shopInfo(){
+        $data['title'] = 'Thông tin shop';
+        $data['key'] = 'general';
+        View::renderTemplate('header', $data,'admin');
+        View::render('Admin/shopInfo', $data);
         View::renderTemplate('footer', $data,'admin');
     }
     
@@ -91,6 +101,11 @@ class PageAdmin extends Controller {
             $data['obj'] = $object;
             $pagePath = 'Admin/Role/ShowInfo';
             $data['result'] = $this->roles->get($id);
+        }else if($object === 'languages'){
+            $data['title'] = 'Ngôn ngữ';
+            $data['obj'] = $object;
+            $pagePath = 'Admin/Language/ShowInfo';
+            $data['result'] = $this->languages->get($id);
         }
 
         View::renderTemplate('header', $data,'admin');
@@ -119,6 +134,11 @@ class PageAdmin extends Controller {
             $data['obj'] = $object;
             $data['link'] = DIR.'admin/~role';
             $pagePath = 'Admin/Role/CreateRole';
+        }else if($object === 'languages'){
+            $data['title'] = 'Ngôn ngữ';
+            $data['obj'] = $object;
+            $data['link'] = DIR.'admin/~language';
+            $pagePath = 'Admin/Language/CreateLanguage';
         }
 
         View::renderTemplate('header', $data,'admin');
@@ -149,6 +169,12 @@ class PageAdmin extends Controller {
             $data['link'] = DIR.'admin/~role';
             $pagePath = 'Admin/Role/EditRole';
             $data['result'] = $this->roles->get($id);
+        }else if($object === 'languages'){
+            $data['title'] = 'Ngôn ngữ';
+            $data['obj'] = $object;
+            $data['link'] = DIR.'admin/~language';
+            $pagePath = 'Admin/Language/EditLanguage';
+            $data['result'] = $this->languages->get($id);
         }
 
         View::renderTemplate('header', $data,'admin');
