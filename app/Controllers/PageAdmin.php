@@ -15,7 +15,7 @@ class PageAdmin extends Controller {
     {
         parent::__construct();
         if(Session::get('username') === null){
-            Url::redirect('admin/login');
+            Url::redirect('/admin/login');
         }
         $this->users = new \App\Models\Users();
         $this->roles = new \App\Models\Roles();
