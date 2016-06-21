@@ -25,60 +25,60 @@ class PageAdmin extends Controller {
     public function dashboard(){
     	$data['title'] = 'Bảng điều khiển';
         $data['key'] = 'general';
-    	View::renderTemplate('header', $data,'admin');
+    	View::renderTemplate('header', $data,'Admin');
         View::render('Admin/Dashboard', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     //Preference index
     public function preference(){
         $data['title'] = 'Thông tin chung';
         $data['key'] = 'general';
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render('Admin/Preference', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     //Shop Info
     public function shopInfo(){
         $data['title'] = 'Thông tin shop';
         $data['key'] = 'general';
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render('Admin/shopInfo', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
     
     //About us
     public function aboutUs(){
         $data['title'] = 'Về chúng tôi';
         $data['key'] = 'general';
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render('Admin/Preference', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     public function language(){
         $data['title'] = 'Ngôn ngữ';
         $data['key'] = 'general';
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render('Admin/Language', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     public function user(){
         $data['title'] = 'Người dùng';
         $data['key'] = 'user';
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render('Admin/User', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     public function role(){
         $data['title'] = 'Quyền';
         $data['key'] = 'user';
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render('Admin/Role', $data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     public function showInfo(){
@@ -88,7 +88,7 @@ class PageAdmin extends Controller {
         $pagePath = '';
 
         if($token != Session::get('token') || $token === ''){
-            Url::redirect('admin/login');
+            Url::redirect('/admin/login');
         }
 
         if($object === 'users'){
@@ -108,9 +108,9 @@ class PageAdmin extends Controller {
             $data['result'] = $this->languages->get($id);
         }
 
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render($pagePath,$data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     public function createPage(){
@@ -120,30 +120,30 @@ class PageAdmin extends Controller {
         $pagePath = '';
 
         if($token != Session::get('token') || $token === ''){
-            Url::redirect('admin/login');
+            Url::redirect('/Admin/login');
         }
 
         if($object === 'users'){
             $data['title'] = 'Người dùng';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~user';
+            $data['link'] = DIR.'Admin/~user';
             $data['roles'] = $this->roles->getAll();
             $pagePath = 'Admin/User/CreateUser';
         }else if($object === 'roles'){
             $data['title'] = 'Quyền';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~role';
+            $data['link'] = DIR.'Admin/~role';
             $pagePath = 'Admin/Role/CreateRole';
         }else if($object === 'languages'){
             $data['title'] = 'Ngôn ngữ';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~language';
+            $data['link'] = DIR.'Admin/~language';
             $pagePath = 'Admin/Language/CreateLanguage';
         }
 
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render($pagePath,$data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
     public function editPage(){
@@ -153,33 +153,33 @@ class PageAdmin extends Controller {
         $pagePath = '';
 
         if($token != Session::get('token') || $token === ''){
-            Url::redirect('admin/login');
+            Url::redirect('/admin/login');
         }
 
         if($object === 'users'){
             $data['title'] = 'Người dùng';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~user';
+            $data['link'] = DIR.'Admin/~user';
             $pagePath = 'Admin/User/EditUser';
             $data['roles'] = $this->roles->getAll();
             $data['result'] = $this->users->getUserWithoutPassword($id);
         }else if($object === 'roles'){
             $data['title'] = 'Quyền';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~role';
+            $data['link'] = DIR.'Admin/~role';
             $pagePath = 'Admin/Role/EditRole';
             $data['result'] = $this->roles->get($id);
         }else if($object === 'languages'){
             $data['title'] = 'Ngôn ngữ';
             $data['obj'] = $object;
-            $data['link'] = DIR.'admin/~language';
+            $data['link'] = DIR.'Admin/~language';
             $pagePath = 'Admin/Language/EditLanguage';
             $data['result'] = $this->languages->get($id);
         }
 
-        View::renderTemplate('header', $data,'admin');
+        View::renderTemplate('header', $data,'Admin');
         View::render($pagePath,$data);
-        View::renderTemplate('footer', $data,'admin');
+        View::renderTemplate('footer', $data,'Admin');
     }
 
 }

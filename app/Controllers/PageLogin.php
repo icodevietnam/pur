@@ -17,8 +17,8 @@ class PageLogin extends Controller {
     public function login(){
         $data['title'] = 'Đăng nhập';
         $data['token'] = Csrf::makeToken('token');
-    	View::renderTemplate('header', $data,'login');
+    	View::renderTemplate('header', $data,'Login');
         View::render('Login/Login', $data);
-        View::renderTemplate('footer', $data,'login');
+        View::renderTemplate('footer', $data,'Login');
     }
 }

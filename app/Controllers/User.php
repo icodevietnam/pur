@@ -44,9 +44,9 @@ class User extends Controller{
 		//echo uniqid();
 		$data['title'] = 'Đăng nhập';
 		$data['error'] = $error;
-		View::renderTemplate('header', $data,'login');
+		View::renderTemplate('header', $data,'Login');
         View::render('Login/Login', $data);
-        View::renderTemplate('footer', $data,'login');
+        View::renderTemplate('footer', $data,'Login');
 	}
 
 	public function logout(){
