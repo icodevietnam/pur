@@ -1,9 +1,9 @@
 $(function() {
 	StringUtil.setMessage(escapeHtml("Ghi chú : Bạn có thể thêm xoá sửa thông tin cửa hàng."),'alert-info');
-	//Role.displayTable();
+	ShopInfo.countShopInfo();
 });
 
-var Role = {
+var ShopInfo = {
 	object : 'roles',
     displayTable: function() {
         var dataItems = [];
@@ -57,6 +57,28 @@ var Role = {
             }
         });
     },
+    countShopInfo : function(){
+        $.ajax({
+            url: DIR + "shopinfo/~count",
+            type: "GET",
+            data : {
+                token : TOKEN
+            },
+            dataType: "JSON",
+            success: function(response) {
+                if(response === 0){
+                    $('#createItemBtn').show();
+                }else{
+                    $('#createItemBtn').hide();
+                }
+            },
+            error : function(jqXHR, textStatus, errorThrown){
+                if(jqXHR.status !== '200'){                
+                StringUtil.setMessage(escapeHtml('Có lỗi xảy ra : không gọi được dịch vụ. Loại lỗi:'+ jqXHR.status),'alert-danger');
+                }
+            }
+        });
+    },
     delete : function(id){
         confirm('Bạn muốn xóa ?','Xóa','Có',Role.ajaxDelete,id);
     },
@@ -80,9 +102,10 @@ var Role = {
                 $('#pleaseWaitDialog').modal('hide');
             },
             error : function(jqXHR, textStatus, errorThrown){
-                console.log(jqXHR.status);
-                StringUtil.setMessage(escapeHtml('Có lỗi xảy ra : không gọi được dịch vụ. Loại lỗi:'+ jqXHR.status),'alert-danger');
-            }
+                    if(jqXHR.status !== '200'){                
+                        StringUtil.setMessage(escapeHtml('Có lỗi xảy ra : không gọi được dịch vụ. Loại lỗi:'+ jqXHR.status),'alert-danger');
+                    }
+                }
         });
     }
 }

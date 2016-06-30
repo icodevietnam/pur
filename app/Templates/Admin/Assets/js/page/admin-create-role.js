@@ -59,9 +59,10 @@ var createRoleForm = {
 	                $('#pleaseWaitDialog').modal('hide');
 	            },
 	            error : function(jqXHR, textStatus, errorThrown){
-	            	console.log(jqXHR.status);
-	            	StringUtil.setMessage(escapeHtml('Có lỗi xảy ra : không gọi được dịch vụ. Loại lỗi:'+ jqXHR.status),'alert-danger');
-	            }
+                if(jqXHR.status !== '200'){                
+                StringUtil.setMessage(escapeHtml('Có lỗi xảy ra : không gọi được dịch vụ. Loại lỗi:'+ jqXHR.status),'alert-danger');
+                }
+            	}
 			});
 		}
 	}

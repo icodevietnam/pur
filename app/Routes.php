@@ -66,10 +66,8 @@ Router::post('/language/~edit','App\Controllers\Language@edit');
 Router::post('/language/~delete','App\Controllers\Language@delete');
 Router::get('/language/~checkCode','App\Controllers\Language@checkCode');
 
-// Router::get('/user/~checkUsername','App\Controllers\User@checkUsername');
-// Router::get('/user/~checkEmail','App\Controllers\User@checkEmail');
-// Router::post('/user/~delete','App\Controllers\User@delete');
-// Router::post('/user/~edit','App\Controllers\User@edit');
+/* Shop infos */
+Router::get('/shopinfo/~count','App\Controllers\ShopInfo@countShopInfo');
 
 /** End default routes */
 

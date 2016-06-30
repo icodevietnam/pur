@@ -38,15 +38,6 @@ class PageAdmin extends Controller {
         View::render('Admin/Preference', $data);
         View::renderTemplate('footer', $data,'Admin');
     }
-
-    //Shop Info
-    public function shopInfo(){
-        $data['title'] = 'Thông tin shop';
-        $data['key'] = 'general';
-        View::renderTemplate('header', $data,'Admin');
-        View::render('Admin/shopInfo', $data);
-        View::renderTemplate('footer', $data,'Admin');
-    }
     
     //About us
     public function aboutUs(){
@@ -57,6 +48,7 @@ class PageAdmin extends Controller {
         View::renderTemplate('footer', $data,'Admin');
     }
 
+    //Language
     public function language(){
         $data['title'] = 'Ngôn ngữ';
         $data['key'] = 'general';
@@ -65,6 +57,19 @@ class PageAdmin extends Controller {
         View::renderTemplate('footer', $data,'Admin');
     }
 
+    //Shop Infos
+    public function shopInfo(){
+        $data['title'] = 'Thông tin shop';
+        $data['key'] = 'general';
+        $data['languages'] = $this->languages->getAll();
+        View::renderTemplate('header', $data,'Admin');
+        View::render('Admin/ShopInfo', $data);
+        View::renderTemplate('footer', $data,'Admin');
+    }
+
+
+
+    // User
     public function user(){
         $data['title'] = 'Người dùng';
         $data['key'] = 'user';
@@ -73,6 +78,7 @@ class PageAdmin extends Controller {
         View::renderTemplate('footer', $data,'Admin');
     }
 
+    // Role
     public function role(){
         $data['title'] = 'Quyền';
         $data['key'] = 'user';

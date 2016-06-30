@@ -12,6 +12,17 @@ class Commons extends Model{
 		$this->tableName = $table;
 	}
 
+	function countRow(){
+		$data = null;
+		try{
+			$query = "SELECT * FROM ".PREFIX.$this->tableName;
+			$data = $this->db->select($query);
+		}catch (Exception $e){
+			echo 'Caught exception: ',  $e->getMessage(), "\n";
+		}
+		return count($data);
+	}
+
 	function getAll($order='desc'){
 		$data = null;
 		try {
